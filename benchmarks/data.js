@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608049894206,
+  "lastUpdate": 1608054834405,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -210,6 +210,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.131746112726932e-7",
             "extra": "mean: 2.3060986999466553 usec\nrounds: 70922"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jpmelos@gmail.com",
+            "name": "João Sampaio",
+            "username": "jpmelos"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "20c1cb994b607ff4f121b98490753e412834233e",
+          "message": "When Flask activation is missing, do not emit a log message (#253)\n\nIf a Flask request doesn't have an active span, it just means that it\r\nwas initialized via a mechanism that doesn't run `before_request`, like\r\n`app.test_request_context` or even manually. It is okay and\r\ninstrumentation still works.",
+          "timestamp": "2020-12-15T09:53:07-08:00",
+          "tree_id": "b1eb0a785a30e66b5e9f675332c9717cbd64f18d",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/20c1cb994b607ff4f121b98490753e412834233e"
+        },
+        "date": 1608054833655,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1322021.4809850177,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2469416154998283e-7",
+            "extra": "mean: 756.4173611270792 nsec\nrounds: 59524"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1683478.299267827,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1972593527133483e-7",
+            "extra": "mean: 594.0082509141441 nsec\nrounds: 135136"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 87828.80912494133,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000008749317206840019",
+            "extra": "mean: 11.385785711581775 usec\nrounds: 14"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 509158.90153502795,
+            "unit": "iter/sec",
+            "range": "stddev: 2.1345005849819703e-7",
+            "extra": "mean: 1.9640234060234816 usec\nrounds: 70922"
           }
         ]
       }
