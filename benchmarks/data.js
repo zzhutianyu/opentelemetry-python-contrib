@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608664045064,
+  "lastUpdate": 1608664050915,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -836,6 +836,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000003299326200756735",
             "extra": "mean: 4.500883262911728 usec\nrounds: 30770"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "azfaarq@amazon.com",
+            "name": "Azfaar Qureshi",
+            "username": "AzfaarQureshi"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f6f5b90aeb181bf24a4c64f34e74012b5b246e51",
+          "message": "Prometheus Remote Write Exporter (6/6) (#227)\n\n* adding README\r\n\r\nadding sample app\r\n\r\nadding examples readme\r\n\r\nfixing lint errors\r\n\r\nlinting examples\r\n\r\nupdating readme tls_config example\r\n\r\nexcluding examples\r\n\r\nadding examples to exclude in all linters\r\n\r\nadding isort.cfg skip\r\n\r\nchanging isort to path\r\n\r\nignoring yml only\r\n\r\nadding it to excluded directories in pylintrc\r\n\r\nonly adding exclude to directory\r\n\r\nremoving readme.rst and adding explicit file names to ignore\r\n\r\nadding the rest of the files\r\n\r\nadding readme.rst back\r\n\r\nadding to ignore glob instead\r\n\r\nreverting back to ignore list\r\n\r\nconverting README.md to README.rst\r\n\r\n* addressing readme comments\r\n\r\n* adding link to spec for details on aggregators\r\n\r\n* updating readme\r\n\r\n* adding python-snappy to setup.cfg",
+          "timestamp": "2020-12-22T11:06:22-08:00",
+          "tree_id": "4478cadeaead5e63e0e180f5d1fe3a78d0046e1d",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/f6f5b90aeb181bf24a4c64f34e74012b5b246e51"
+        },
+        "date": 1608664050033,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 978775.7395486638,
+            "unit": "iter/sec",
+            "range": "stddev: 9.285014961808802e-7",
+            "extra": "mean: 1.021684497882143 usec\nrounds: 71429"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1263143.6276996874,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000012779564656233862",
+            "extra": "mean: 791.6756084350451 nsec\nrounds: 158731"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 41624.17532093508,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014704745599419265",
+            "extra": "mean: 24.02450000005274 usec\nrounds: 8"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 198680.28770977235,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000038461593521940625",
+            "extra": "mean: 5.0332119584041335 usec\nrounds: 49505"
           }
         ]
       }
