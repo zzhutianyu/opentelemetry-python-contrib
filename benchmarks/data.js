@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1609866412076,
+  "lastUpdate": 1609866416678,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -1094,6 +1094,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000007155212787119734",
             "extra": "mean: 2.0960111215325967 usec\nrounds: 89286"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9fea7f7a2709b0c846934bafb27f3c1c1e415eea",
+          "message": "Ensure SQLAlchemy spans have kind set to CLIENT (#278)\n\nSQLAlchemy spans were missing kind field and it was being set to\r\ninternal instead of client. This commit changes sqlalchemy spans to have\r\nkind set to \"client\" instead.",
+          "timestamp": "2021-01-05T09:05:58-08:00",
+          "tree_id": "52b5dfa2eb3a72e0a8e28d1b94bfa4ad3b7a485f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9fea7f7a2709b0c846934bafb27f3c1c1e415eea"
+        },
+        "date": 1609866412444,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1304788.9588724256,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2678420730509305e-7",
+            "extra": "mean: 766.4074662803565 nsec\nrounds: 70423"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1642204.767043767,
+            "unit": "iter/sec",
+            "range": "stddev: 1.7932572385418506e-7",
+            "extra": "mean: 608.9374602170722 nsec\nrounds: 169492"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 96205.23783810316,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000006994567053262554",
+            "extra": "mean: 10.394444444727924 usec\nrounds: 36"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 511286.39847791684,
+            "unit": "iter/sec",
+            "range": "stddev: 2.194418383640934e-7",
+            "extra": "mean: 1.95585097310816 usec\nrounds: 68028"
           }
         ]
       }
