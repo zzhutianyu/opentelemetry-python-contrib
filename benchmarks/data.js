@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611160958748,
+  "lastUpdate": 1611160983013,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -4636,6 +4636,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 5.308228023391733e-7",
             "extra": "mean: 313.3629501135247 nsec\nrounds: 192308"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8c8f2785bdbc707bfe3edd969c4f021d2ea20dce",
+          "message": "SQLAlchemy: Use SQL operation and DB name as the Span name (#254)\n\nCurrent instrumentation uses the entire SQL query as the operation name\r\nwhich makes traces very hard to read and understand in addition to\r\nintroducing high-cardinality issues. This commit fixes the problem by\r\nusing only the SQL operation name and the DB name instead of the entire\r\nquery.",
+          "timestamp": "2021-01-20T08:41:19-08:00",
+          "tree_id": "3ee47e3717a0ef9c585b079fa12f7e4daddb9d22",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/8c8f2785bdbc707bfe3edd969c4f021d2ea20dce"
+        },
+        "date": 1611160981830,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4081360.2189694946,
+            "unit": "iter/sec",
+            "range": "stddev: 4.981238280824272e-8",
+            "extra": "mean: 245.01635394790014 nsec\nrounds: 52081"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8541631.881727476,
+            "unit": "iter/sec",
+            "range": "stddev: 3.825999650221206e-8",
+            "extra": "mean: 117.07364750045136 nsec\nrounds: 121952"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 613949.1141033453,
+            "unit": "iter/sec",
+            "range": "stddev: 4.2212839656872634e-7",
+            "extra": "mean: 1.6287994835866246 usec\nrounds: 87720"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 3014548.055581227,
+            "unit": "iter/sec",
+            "range": "stddev: 2.694157839965752e-7",
+            "extra": "mean: 331.7246836216739 nsec\nrounds: 37313"
           }
         ]
       }
