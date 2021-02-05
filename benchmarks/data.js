@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1612545044083,
+  "lastUpdate": 1612545050477,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -7026,6 +7026,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.9964219177044625e-7",
             "extra": "mean: 4.3263179662304125 usec\nrounds: 36897"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "alertedsnake@users.noreply.github.com",
+            "name": "Michael Stella",
+            "username": "alertedsnake"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ade29f692bb7d0ab23aad638f9503bf6dbaec507",
+          "message": "gRPC instrumentation: client additions (#269)\n\nThe docs on metric labels suggests that they should probably be strings,\r\nand all others I can find are strings, and so these ought to be also.\r\nOtherwise, some of the exporters/processors have to handle things\r\nspecifically, and not all of these come out as nice as could be when you\r\n`str()` them.\r\n\r\nI've also made sure to use the `StatusCode` name, as that's the\r\ninteresting thing.\r\n\r\nFinally, there's no need to report specifically that `error=false`, so\r\nI've removed that tag.",
+          "timestamp": "2021-02-05T09:09:57-08:00",
+          "tree_id": "0ba0a2485e59a499caa935b144abe3b86fa2ac9c",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/ade29f692bb7d0ab23aad638f9503bf6dbaec507"
+        },
+        "date": 1612545040858,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1148837.4617820666,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3123633797616206e-7",
+            "extra": "mean: 870.4451528319843 nsec\nrounds: 79366"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1621092.5310396012,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1900715036104474e-7",
+            "extra": "mean: 616.8679337253521 nsec\nrounds: 153847"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 44882.0947349746,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001523432407750741",
+            "extra": "mean: 22.280600001067796 usec\nrounds: 5"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 276017.0995288955,
+            "unit": "iter/sec",
+            "range": "stddev: 2.8051798173556114e-7",
+            "extra": "mean: 3.6229639457366756 usec\nrounds: 41493"
           }
         ]
       }
