@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615355687428,
+  "lastUpdate": 1615355689458,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -2964,6 +2964,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000004329462613574079",
             "extra": "mean: 2.1680065279002205 usec\nrounds: 62501"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9ef4410fa8e8a66adb8f48b1fbedde5108e6f4e5",
+          "message": "Added logging instrumentation to enable log - trace correlation (#345)\n\nThis commit adds a new logging instrumentation. The instrumentation\r\npatches standard library logging module to inject tracing context\r\nvariables (otelSpanID, otelTraceID, otelServiceName) into log record\r\nobjects. It also optionally calls `logging.basicConfig()` and sets a\r\nlogging format that makes use of these vars if instructed by the user.",
+          "timestamp": "2021-03-09T21:52:58-08:00",
+          "tree_id": "e000366c9fe886a86c257aaf1680c4f88f8961ad",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9ef4410fa8e8a66adb8f48b1fbedde5108e6f4e5"
+        },
+        "date": 1615355688161,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1211629.932749657,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001258120155286972",
+            "extra": "mean: 825.334512602056 nsec\nrounds: 102041"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1546613.1838915423,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001427661531799411",
+            "extra": "mean: 646.5740822691228 nsec\nrounds: 185186"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 101653.56465524924,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004753587954925105",
+            "extra": "mean: 9.83733333298668 usec\nrounds: 153"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 488681.5755735347,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000024148877215402514",
+            "extra": "mean: 2.0463222883456638 usec\nrounds: 50762"
           }
         ]
       }
