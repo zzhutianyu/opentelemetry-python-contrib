@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615444438833,
+  "lastUpdate": 1615444443916,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -9312,6 +9312,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000021432129335987565",
             "extra": "mean: 5.35900822501354 usec\nrounds: 40000"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yusuke@tsutsumi.io",
+            "name": "Yusuke Tsutsumi",
+            "username": "toumorokoshi"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2d9df106455de7b1b5aa3dfe180059fe9366d039",
+          "message": "datadog: do not add None tracestate value. (#368)\n\nThe datadog exporter sometimes attempts to add a \"None\" value, if the\r\ndatadog origin header doesn't exist.\r\n\r\nThis does not cause runtime errors in the most recent opentelemetry\r\nrelease (tracestate protects against an invalid value), but does cause warnings:\r\n\r\nWARNING  opentelemetry.trace.span:span.py:230 Invalid key/value pair (dd_origin, None) found.",
+          "timestamp": "2021-03-10T22:33:12-08:00",
+          "tree_id": "f47dbe814c4d0b353cf035e19cd7087e8763945d",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/2d9df106455de7b1b5aa3dfe180059fe9366d039"
+        },
+        "date": 1615444442659,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 886330.8459787655,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000012843425839366271",
+            "extra": "mean: 1.1282468668860453 usec\nrounds: 30960"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1109415.8044167084,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000027734757157639486",
+            "extra": "mean: 901.3752968173774 nsec\nrounds: 161291"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 35310.485100056016,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001893194892515913",
+            "extra": "mean: 28.3201999963012 usec\nrounds: 5"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 184236.90283162828,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000034009331814966043",
+            "extra": "mean: 5.427794240081679 usec\nrounds: 44445"
           }
         ]
       }
