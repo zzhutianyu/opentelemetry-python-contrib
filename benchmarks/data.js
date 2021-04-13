@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1618352608240,
+  "lastUpdate": 1618352611582,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -4420,6 +4420,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000029547887839101023",
             "extra": "mean: 2.1761857099341846 usec\nrounds: 32680"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "alertedsnake@users.noreply.github.com",
+            "name": "Michael Stella",
+            "username": "alertedsnake"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e7d26a4c2dfc05b587d92fb5e64c99447bd05f65",
+          "message": "Update gRPCContext wrapper class (#420)\n\nThere are a few cases where one needs to dig into `grpc.ServicerContext`\r\nobjects, and these fields were missing from our wrapper, which can cause\r\nissues with implmementation.",
+          "timestamp": "2021-04-13T15:22:43-07:00",
+          "tree_id": "4c07c5e3097b8270030a96d0e882fa5960ff9d3f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e7d26a4c2dfc05b587d92fb5e64c99447bd05f65"
+        },
+        "date": 1618352610280,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1270011.2008916652,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016489003743869576",
+            "extra": "mean: 787.3946302976758 nsec\nrounds: 101011"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1670458.61967007,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017633362980204009",
+            "extra": "mean: 598.637995712524 nsec\nrounds: 120482"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 111813.87544854564,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004692852566720644",
+            "extra": "mean: 8.943433862644165 usec\nrounds: 189"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 503981.88791825616,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000025726867049356097",
+            "extra": "mean: 1.9841982896063832 usec\nrounds: 75188"
           }
         ]
       }
