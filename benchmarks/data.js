@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1620154433394,
+  "lastUpdate": 1620154437053,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -24346,6 +24346,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.4895887155758824e-7",
             "extra": "mean: 2.0161562080095554 usec\nrounds: 69926"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9199e3cb3e56d51ce3dd69e5fbb757a54857778f",
+          "message": "Load instrumentors via Distro (#480)\n\nThis commit makes the following changes:\r\n\r\n- Introduces a new `load_instrumentor(EntryPoint) -> None:` with a\r\ndefault implementation method to the `BaseDistro` class.\r\n- The default implementation loads the insrumentor from the provided\r\nentry point and calls applies it without any arguments. (same as before)\r\n- sitecustomize now calls Distro's `load_instrumentor` method to load\r\nand activate an instrumentor instead of doing it directly.\r\n- Added a new `DefaultDistro` implementation which is used if not distro\r\nis found by entry points.",
+          "timestamp": "2021-05-04T11:53:08-07:00",
+          "tree_id": "743ff946384c8f11b2f05a9c46e836b5e08c5cb8",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9199e3cb3e56d51ce3dd69e5fbb757a54857778f"
+        },
+        "date": 1620154433014,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1165766.548160448,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001407753503498798",
+            "extra": "mean: 857.8046793142043 nsec\nrounds: 76336"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1495867.6439778788,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000023060242871827716",
+            "extra": "mean: 668.5083429846472 nsec\nrounds: 185186"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 112567.56867025104,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022457647810518357",
+            "extra": "mean: 8.883553334347502 usec\nrounds: 150"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 417626.7643384717,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000032608991414938293",
+            "extra": "mean: 2.394482550906473 usec\nrounds: 76336"
           }
         ]
       }
