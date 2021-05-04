@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1620078764256,
+  "lastUpdate": 1620154431006,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -5208,58 +5208,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "moaddib666@gmail.com",
-            "name": "Max Nikitenko",
-            "username": "moaddib666"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "187987d9ccc359ca2b1e72cfafd10d184c3ab655",
-          "message": "Feature/urllib instrumentation (#222)",
-          "timestamp": "2020-12-15T10:11:33-08:00",
-          "tree_id": "0b35fa021a647e4c9db902738c9ab8f2cbaa2d59",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/187987d9ccc359ca2b1e72cfafd10d184c3ab655"
-        },
-        "date": 1608055955756,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1279077.666144274,
-            "unit": "iter/sec",
-            "range": "stddev: 1.9100164908968202e-7",
-            "extra": "mean: 781.8133538477441 nsec\nrounds: 49259"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1578676.813629132,
-            "unit": "iter/sec",
-            "range": "stddev: 1.9201947627651436e-7",
-            "extra": "mean: 633.4418744652085 nsec\nrounds: 84739"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 77908.38890687696,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000014552363802666258",
-            "extra": "mean: 12.835588234218127 usec\nrounds: 17"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 498031.8169000268,
-            "unit": "iter/sec",
-            "range": "stddev: 3.5731914597399487e-7",
-            "extra": "mean: 2.0079038448275215 usec\nrounds: 43669"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "lechen@microsoft.com",
             "name": "Leighton Chen",
             "username": "lzchen"
@@ -10402,6 +10350,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000005455134784948775",
             "extra": "mean: 2.05812230383426 usec\nrounds: 81968"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9199e3cb3e56d51ce3dd69e5fbb757a54857778f",
+          "message": "Load instrumentors via Distro (#480)\n\nThis commit makes the following changes:\r\n\r\n- Introduces a new `load_instrumentor(EntryPoint) -> None:` with a\r\ndefault implementation method to the `BaseDistro` class.\r\n- The default implementation loads the insrumentor from the provided\r\nentry point and calls applies it without any arguments. (same as before)\r\n- sitecustomize now calls Distro's `load_instrumentor` method to load\r\nand activate an instrumentor instead of doing it directly.\r\n- Added a new `DefaultDistro` implementation which is used if not distro\r\nis found by entry points.",
+          "timestamp": "2021-05-04T11:53:08-07:00",
+          "tree_id": "743ff946384c8f11b2f05a9c46e836b5e08c5cb8",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9199e3cb3e56d51ce3dd69e5fbb757a54857778f"
+        },
+        "date": 1620154429373,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1022316.3985156585,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000021372860634563833",
+            "extra": "mean: 978.1707516889484 nsec\nrounds: 52632"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1373724.8845309857,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014054821394388161",
+            "extra": "mean: 727.9477945406935 nsec\nrounds: 95239"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 133432.98327737427,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000027367257637989655",
+            "extra": "mean: 7.4943988767848095 usec\nrounds: 178"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 462728.10139995825,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000019212805518209042",
+            "extra": "mean: 2.1610963262757448 usec\nrounds: 86207"
           }
         ]
       }
