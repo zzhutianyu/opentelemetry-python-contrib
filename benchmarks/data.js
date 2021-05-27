@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1622094980953,
+  "lastUpdate": 1622094985135,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10420,58 +10420,6 @@ window.BENCHMARK_DATA = {
             "username": "web-flow"
           },
           "distinct": true,
-          "id": "8c8f2785bdbc707bfe3edd969c4f021d2ea20dce",
-          "message": "SQLAlchemy: Use SQL operation and DB name as the Span name (#254)\n\nCurrent instrumentation uses the entire SQL query as the operation name\r\nwhich makes traces very hard to read and understand in addition to\r\nintroducing high-cardinality issues. This commit fixes the problem by\r\nusing only the SQL operation name and the DB name instead of the entire\r\nquery.",
-          "timestamp": "2021-01-20T08:41:19-08:00",
-          "tree_id": "3ee47e3717a0ef9c585b079fa12f7e4daddb9d22",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/8c8f2785bdbc707bfe3edd969c4f021d2ea20dce"
-        },
-        "date": 1611160950966,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 975370.2495697472,
-            "unit": "iter/sec",
-            "range": "stddev: 1.7644734169512607e-7",
-            "extra": "mean: 1.025251693335036 usec\nrounds: 70423"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1395711.9582914354,
-            "unit": "iter/sec",
-            "range": "stddev: 1.3377831038738216e-7",
-            "extra": "mean: 716.4802121665223 nsec\nrounds: 117648"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 33990.48266660857,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00002149725564362613",
-            "extra": "mean: 29.419999998481217 usec\nrounds: 5"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 236304.66234820176,
-            "unit": "iter/sec",
-            "range": "stddev: 3.6853411207546123e-7",
-            "extra": "mean: 4.231825094193322 usec\nrounds: 34247"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
           "id": "8b9202be6f6d073f6510e37f2783c4895d344bab",
           "message": "Updated dbapi and psycopg2 instrumentations. (#246)\n\nChanges:\r\n\r\n- Update dbapi instrumentation to use the SQL statement name as the span\r\ninstead of the entire SQL query.\r\n- Renamed TracedCursor with CursorTracing. The class was not a valid\r\nCursor so the name was confusing.\r\n- Updated CursorTracing's (previously TracedCursor) traced_execution\r\nmethod to accept the cursor instance as the first argument. This is\r\nrequired as for some dbapi implementations, we need a reference to the\r\ncursor in order to correctly format the SQL query.\r\n- Updated psycopg2 instrumentation to leverage dbapi's `cursor_factory`\r\nmechanism instead of wrapping the cursor with wrapt. This results in a\r\nsimpler instrumentation without monkey patching objects at runtime and\r\nallows psycopg2's type registration system to work. This should make it\r\npossible to use psycopg2 instrumentation when using the JSONB feature or\r\nwith frameworks like Django.",
           "timestamp": "2021-01-20T10:45:28-08:00",
@@ -15604,6 +15552,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.736508267158488e-7",
             "extra": "mean: 3.9935696869869437 usec\nrounds: 51021"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "daa72382df6fa9ab79bbb4c84fac0c29fd429776",
+          "message": "Instrumentation runtime checks (#475)",
+          "timestamp": "2021-05-26T22:55:36-07:00",
+          "tree_id": "1068a726812b63a7b8eb9f18fbc30044c1a9c0a4",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/daa72382df6fa9ab79bbb4c84fac0c29fd429776"
+        },
+        "date": 1622094983401,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1112516.5023157012,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3392567837306439e-7",
+            "extra": "mean: 898.8630711710808 nsec\nrounds: 74075"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1597106.1387232435,
+            "unit": "iter/sec",
+            "range": "stddev: 9.567415845313371e-8",
+            "extra": "mean: 626.132462805145 nsec\nrounds: 153847"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 70154.72037188291,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000067214014955913854",
+            "extra": "mean: 14.25420833693162 usec\nrounds: 24"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 247732.0147786095,
+            "unit": "iter/sec",
+            "range": "stddev: 2.714170547620689e-7",
+            "extra": "mean: 4.036619977816228 usec\nrounds: 49505"
           }
         ]
       }
