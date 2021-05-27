@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1622158007581,
+  "lastUpdate": 1622158019553,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "8b9202be6f6d073f6510e37f2783c4895d344bab",
-          "message": "Updated dbapi and psycopg2 instrumentations. (#246)\n\nChanges:\r\n\r\n- Update dbapi instrumentation to use the SQL statement name as the span\r\ninstead of the entire SQL query.\r\n- Renamed TracedCursor with CursorTracing. The class was not a valid\r\nCursor so the name was confusing.\r\n- Updated CursorTracing's (previously TracedCursor) traced_execution\r\nmethod to accept the cursor instance as the first argument. This is\r\nrequired as for some dbapi implementations, we need a reference to the\r\ncursor in order to correctly format the SQL query.\r\n- Updated psycopg2 instrumentation to leverage dbapi's `cursor_factory`\r\nmechanism instead of wrapping the cursor with wrapt. This results in a\r\nsimpler instrumentation without monkey patching objects at runtime and\r\nallows psycopg2's type registration system to work. This should make it\r\npossible to use psycopg2 instrumentation when using the JSONB feature or\r\nwith frameworks like Django.",
-          "timestamp": "2021-01-20T10:45:28-08:00",
-          "tree_id": "e93205f89443f5f5eb3513e7e53cbf66d1976ae1",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/8b9202be6f6d073f6510e37f2783c4895d344bab"
-        },
-        "date": 1611168398416,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1241530.0595211654,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000014438942252560485",
-            "extra": "mean: 805.4577433152775 nsec\nrounds: 98040"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 2488619.647781583,
-            "unit": "iter/sec",
-            "range": "stddev: 3.420866792987374e-7",
-            "extra": "mean: 401.8291830539814 nsec\nrounds: 136987"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 105843.83206123255,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000003375657227230234",
-            "extra": "mean: 9.447881662310584 usec\nrounds: 169"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 487846.4933057827,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000003846328242800882",
-            "extra": "mean: 2.0498251268011045 usec\nrounds: 69931"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5200,6 +5148,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.465834705930072e-7",
             "extra": "mean: 1.8749111907140004 usec\nrounds: 84034"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "adamantike@users.noreply.github.com",
+            "name": "Michael Manganiello",
+            "username": "adamantike"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3bb28ab3457f8ad90327b83946bff0233c4f0207",
+          "message": "Fix ASGI instrumentation default span name (#418)",
+          "timestamp": "2021-05-27T16:20:29-07:00",
+          "tree_id": "692c3947db5b7298fecdec5cb249450f7dea43d0",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3bb28ab3457f8ad90327b83946bff0233c4f0207"
+        },
+        "date": 1622158017950,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1534339.0055898519,
+            "unit": "iter/sec",
+            "range": "stddev: 2.413960379506073e-7",
+            "extra": "mean: 651.7464500067025 nsec\nrounds: 125001"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 3149249.775473827,
+            "unit": "iter/sec",
+            "range": "stddev: 4.003464470131934e-8",
+            "extra": "mean: 317.53594388992553 nsec\nrounds: 131562"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 140749.72689260443,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004887162455830129",
+            "extra": "mean: 7.104809523097867 usec\nrounds: 42"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 615855.3773781422,
+            "unit": "iter/sec",
+            "range": "stddev: 3.9825768473223106e-7",
+            "extra": "mean: 1.6237578443453105 usec\nrounds: 68489"
           }
         ]
       }
