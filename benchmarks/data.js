@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1622478972311,
+  "lastUpdate": 1622478974676,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10420,58 +10420,6 @@ window.BENCHMARK_DATA = {
             "username": "web-flow"
           },
           "distinct": true,
-          "id": "2a11aeeafa1815e39f28dd62e7d6e7cf0b171e58",
-          "message": "[pre-release] Update changelogs, version [0.17b0] (#287)",
-          "timestamp": "2021-01-20T16:01:24-08:00",
-          "tree_id": "0961312fff1a59e4fa73e69a0165a61ba9bb911b",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/2a11aeeafa1815e39f28dd62e7d6e7cf0b171e58"
-        },
-        "date": 1611187340765,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1154800.0756252408,
-            "unit": "iter/sec",
-            "range": "stddev: 3.8404753866990514e-7",
-            "extra": "mean: 865.9507572846082 nsec\nrounds: 77514"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1524260.9873673378,
-            "unit": "iter/sec",
-            "range": "stddev: 3.0364549250403876e-7",
-            "extra": "mean: 656.0556284571535 nsec\nrounds: 156251"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 39554.771497714624,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000174833612569607",
-            "extra": "mean: 25.281399996401888 usec\nrounds: 5"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 258674.95625092083,
-            "unit": "iter/sec",
-            "range": "stddev: 8.902449466817807e-7",
-            "extra": "mean: 3.8658554909736846 usec\nrounds: 36496"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
-            "email": "aboten@lightstep.com",
-            "name": "alrex",
-            "username": "codeboten"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
           "id": "08e82a92d7bdff2074fb19a853d99063e5058b02",
           "message": "[post-release] updating version to 0.18.dev0 (#289)",
           "timestamp": "2021-01-21T09:10:30-08:00",
@@ -15604,6 +15552,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.6786669684256475e-7",
             "extra": "mean: 3.9884377276160903 usec\nrounds: 46947"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "mario.jonke@dynatrace.com",
+            "name": "Mario Jonke",
+            "username": "mariojonke"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3a7eb5364c0b92b32c1b5e4887903cb14e5c2b62",
+          "message": "Make propagators conform to spec (#488)\n\n* Make propagators conform to spec\r\n\r\n* do not modify / set an invalid span in the passed context in case\r\n  a propagator did not manage to extract\r\n* in case no context is passed to propagator.extract assume the root\r\n  context as default so that a new trace is started instead of continung\r\n  the current active trace in case extraction fails\r\n* fix also ot-trace propagator which compared int with str trace/span ids\r\n  when checking for validity in extract",
+          "timestamp": "2021-05-31T09:35:28-07:00",
+          "tree_id": "a4ffeff5bc8deb347e2322ddafffe6d6e7356912",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3a7eb5364c0b92b32c1b5e4887903cb14e5c2b62"
+        },
+        "date": 1622478970455,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 989853.3338522535,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001763328219464998",
+            "extra": "mean: 1.0102506763383403 usec\nrounds: 61729"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1374969.8014081053,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000005381811828915959",
+            "extra": "mean: 727.2887004324756 nsec\nrounds: 188680"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 107457.31741334913,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000059131077538464864",
+            "extra": "mean: 9.306020511877888 usec\nrounds: 14772"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 190476.19044151006,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001954078057216335",
+            "extra": "mean: 5.250000000955879 usec\nrounds: 20"
           }
         ]
       }
