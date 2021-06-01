@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1622488749169,
+  "lastUpdate": 1622564667195,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -5208,58 +5208,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "morgan_mclean@hotmail.com",
-            "name": "Morgan McLean",
-            "username": "mtwo"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "f3a078296c098d861a2e70795404a1e5938d44cc",
-          "message": "Added Zoom passcode (#295)",
-          "timestamp": "2021-01-26T08:15:47-08:00",
-          "tree_id": "ba9b86df7270b95a084ae310f92e9b726eeb0634",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/f3a078296c098d861a2e70795404a1e5938d44cc"
-        },
-        "date": 1611677826864,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 880256.5077693874,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000007277521791242573",
-            "extra": "mean: 1.136032498679332 usec\nrounds: 84034"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1185075.264807294,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000002494186009117183",
-            "extra": "mean: 843.8282611211288 nsec\nrounds: 163935"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 55918.24752131733,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000011580904485160296",
-            "extra": "mean: 17.88325000025755 usec\nrounds: 12"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 361734.0030169681,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00000899193232645166",
-            "extra": "mean: 2.7644622613846237 usec\nrounds: 75758"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "enowell@amazon.com",
             "name": "(Eliseo) Nathaniel Ruiz Nowell",
             "username": "NathanielRN"
@@ -10402,6 +10350,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000001003742995751732",
             "extra": "mean: 2.0999999993488347 usec\nrounds: 33"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5d1f3201afa8b7be111b22714cacfec36fe8f96b",
+          "message": "Simplify bootstrap and generate code (#514)\n\n- We now automatically generate bootstrap_gen.py file from the list of instrumentations present in the source tree.\r\n- Bootstrap command now uses consumes this auto-generated list instead of keeping it's own local copy.\r\n- We no longer uninstall packages before installing them as instrumentation package no longer specify libraries as dependencies so the edge cases are no longer there.\r\n- We no longer try to install an incompatible version or force upgrade/downgrade an installed version. This used to leave systems in broken states which should happen no more.",
+          "timestamp": "2021-06-01T09:19:09-07:00",
+          "tree_id": "c7cebfae8f4fcaa11930aab1ede52dceb8184542",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/5d1f3201afa8b7be111b22714cacfec36fe8f96b"
+        },
+        "date": 1622564665569,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1400651.8307022457,
+            "unit": "iter/sec",
+            "range": "stddev: 9.961131209281566e-8",
+            "extra": "mean: 713.9533023696754 nsec\nrounds: 58140"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 2715672.244005685,
+            "unit": "iter/sec",
+            "range": "stddev: 1.8359747611942304e-8",
+            "extra": "mean: 368.2329493948035 nsec\nrounds: 128189"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 194222.93783797522,
+            "unit": "iter/sec",
+            "range": "stddev: 4.133604592290203e-7",
+            "extra": "mean: 5.1487224481910605 usec\nrounds: 21142"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 493531.215871109,
+            "unit": "iter/sec",
+            "range": "stddev: 8.542710357279586e-7",
+            "extra": "mean: 2.0262142856251684 usec\nrounds: 42"
           }
         ]
       }
