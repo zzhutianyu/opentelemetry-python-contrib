@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623255665136,
+  "lastUpdate": 1623255675541,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10410,58 +10410,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "alertedsnake@users.noreply.github.com",
-            "name": "Michael Stella",
-            "username": "alertedsnake"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "ade29f692bb7d0ab23aad638f9503bf6dbaec507",
-          "message": "gRPC instrumentation: client additions (#269)\n\nThe docs on metric labels suggests that they should probably be strings,\r\nand all others I can find are strings, and so these ought to be also.\r\nOtherwise, some of the exporters/processors have to handle things\r\nspecifically, and not all of these come out as nice as could be when you\r\n`str()` them.\r\n\r\nI've also made sure to use the `StatusCode` name, as that's the\r\ninteresting thing.\r\n\r\nFinally, there's no need to report specifically that `error=false`, so\r\nI've removed that tag.",
-          "timestamp": "2021-02-05T09:09:57-08:00",
-          "tree_id": "0ba0a2485e59a499caa935b144abe3b86fa2ac9c",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/ade29f692bb7d0ab23aad638f9503bf6dbaec507"
-        },
-        "date": 1612545043089,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 993436.7957448154,
-            "unit": "iter/sec",
-            "range": "stddev: 3.6188008430729434e-7",
-            "extra": "mean: 1.00660656448734 usec\nrounds: 90091"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1393877.690554314,
-            "unit": "iter/sec",
-            "range": "stddev: 1.8456919196978247e-7",
-            "extra": "mean: 717.4230614181954 nsec\nrounds: 161291"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 53737.17635999906,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000013167570353999306",
-            "extra": "mean: 18.609090907582207 usec\nrounds: 11"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 233640.27686540384,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000018439789507832545",
-            "extra": "mean: 4.280083953915544 usec\nrounds: 32363"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "lechen@microsoft.com",
             "name": "Leighton Chen",
             "username": "lzchen"
@@ -15604,6 +15552,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000023706464152022208",
             "extra": "mean: 5.215300000571688 usec\nrounds: 20"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kamalhusain@yahoo.com",
+            "name": "kamalhussain",
+            "username": "kamalhussain"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e347fa754145ea80bce0eac0c0a80a8d30290a9a",
+          "message": "Update __init__.py (#537)",
+          "timestamp": "2021-06-09T09:20:06-07:00",
+          "tree_id": "ae43020185706d3326a988f2d664deb98007d683",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e347fa754145ea80bce0eac0c0a80a8d30290a9a"
+        },
+        "date": 1623255673318,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 997702.2693607569,
+            "unit": "iter/sec",
+            "range": "stddev: 2.341185553139704e-7",
+            "extra": "mean: 1.0023030223642924 usec\nrounds: 76331"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1405341.4628028686,
+            "unit": "iter/sec",
+            "range": "stddev: 2.930972512903266e-7",
+            "extra": "mean: 711.5708363187125 nsec\nrounds: 70917"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 117766.08045047545,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000012350779565029403",
+            "extra": "mean: 8.491409378446056 usec\nrounds: 13755"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 209907.64066010862,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016385227974883175",
+            "extra": "mean: 4.7639999995009354 usec\nrounds: 22"
           }
         ]
       }
