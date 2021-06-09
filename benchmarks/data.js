@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623255685501,
+  "lastUpdate": 1623255725829,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -18734,58 +18734,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "alertedsnake@users.noreply.github.com",
-            "name": "Michael Stella",
-            "username": "alertedsnake"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "ade29f692bb7d0ab23aad638f9503bf6dbaec507",
-          "message": "gRPC instrumentation: client additions (#269)\n\nThe docs on metric labels suggests that they should probably be strings,\r\nand all others I can find are strings, and so these ought to be also.\r\nOtherwise, some of the exporters/processors have to handle things\r\nspecifically, and not all of these come out as nice as could be when you\r\n`str()` them.\r\n\r\nI've also made sure to use the `StatusCode` name, as that's the\r\ninteresting thing.\r\n\r\nFinally, there's no need to report specifically that `error=false`, so\r\nI've removed that tag.",
-          "timestamp": "2021-02-05T09:09:57-08:00",
-          "tree_id": "0ba0a2485e59a499caa935b144abe3b86fa2ac9c",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/ade29f692bb7d0ab23aad638f9503bf6dbaec507"
-        },
-        "date": 1612545057281,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 4358259.181835713,
-            "unit": "iter/sec",
-            "range": "stddev: 5.219547708733315e-8",
-            "extra": "mean: 229.44941048200772 nsec\nrounds: 60965"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 8595194.55404609,
-            "unit": "iter/sec",
-            "range": "stddev: 3.6591598517898707e-8",
-            "extra": "mean: 116.34407967292947 nsec\nrounds: 120468"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 655007.2177517603,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00000465793292395789",
-            "extra": "mean: 1.5267007338215455 usec\nrounds: 86942"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 2968559.5968129686,
-            "unit": "iter/sec",
-            "range": "stddev: 1.845513089724458e-7",
-            "extra": "mean: 336.863710290201 nsec\nrounds: 41835"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "lechen@microsoft.com",
             "name": "Leighton Chen",
             "username": "lzchen"
@@ -23928,6 +23876,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000012694406196037502",
             "extra": "mean: 440.3850987897933 nsec\nrounds: 196079"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kamalhusain@yahoo.com",
+            "name": "kamalhussain",
+            "username": "kamalhussain"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e347fa754145ea80bce0eac0c0a80a8d30290a9a",
+          "message": "Update __init__.py (#537)",
+          "timestamp": "2021-06-09T09:20:06-07:00",
+          "tree_id": "ae43020185706d3326a988f2d664deb98007d683",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e347fa754145ea80bce0eac0c0a80a8d30290a9a"
+        },
+        "date": 1623255723575,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3655260.9870614633,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5443125807650041e-7",
+            "extra": "mean: 273.5782762269678 nsec\nrounds: 42552"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7206582.480172794,
+            "unit": "iter/sec",
+            "range": "stddev: 2.3139614592490345e-7",
+            "extra": "mean: 138.76202801413243 nsec\nrounds: 86957"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 1184544.717106154,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018938115917192773",
+            "extra": "mean: 844.2062047628307 nsec\nrounds: 142858"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 2271159.408066014,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001392866251893566",
+            "extra": "mean: 440.3037481421348 nsec\nrounds: 196040"
           }
         ]
       }
