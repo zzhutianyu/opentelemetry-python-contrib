@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1628889328120,
+  "lastUpdate": 1628889329350,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28142,6 +28142,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000001046554955700655",
             "extra": "mean: 2.534236840215511 usec\nrounds: 38"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "enruizno@edu.uwaterloo.ca",
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b8fe7fc7cd900174b34fa6b172735a29c2e0a195",
+          "message": "EKS Detector should return empty string, not resource if env var missing (#613)\n\n* EKS Detector returns string if missing env var\r\n\r\n* Update sdk-extension/opentelemetry-sdk-extension-aws/src/opentelemetry/sdk/extension/aws/resource/eks.py\r\n\r\nAdd return value typing to _get_cluster_name method\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2021-08-13T17:14:41-04:00",
+          "tree_id": "bdd1b77bb5a02974686df71b75268c5de5612ab2",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b8fe7fc7cd900174b34fa6b172735a29c2e0a195"
+        },
+        "date": 1628889324776,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1071487.8270808328,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004291023332122392",
+            "extra": "mean: 933.2817179308565 nsec\nrounds: 70922"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1586961.3699824524,
+            "unit": "iter/sec",
+            "range": "stddev: 6.098993619008043e-7",
+            "extra": "mean: 630.1350612025657 nsec\nrounds: 175439"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 170937.3310951519,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000020532560165892334",
+            "extra": "mean: 5.850097188210761 usec\nrounds: 16751"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 366666.6666371258,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013582838659866371",
+            "extra": "mean: 2.727272727492453 usec\nrounds: 22"
           }
         ]
       }
