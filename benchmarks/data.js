@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1628889332910,
+  "lastUpdate": 1628889358141,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -18734,58 +18734,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "47993494+cynthiakedu@users.noreply.github.com",
-            "name": "Cynthia Du",
-            "username": "cynthiakedu"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e96a2cd1adda1722c14d4949947535e1f19806b5",
-          "message": "Fix broken links to projects (#413)",
-          "timestamp": "2021-04-06T12:58:39-07:00",
-          "tree_id": "d8a2dcce768bc984b1735557704084957f176375",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e96a2cd1adda1722c14d4949947535e1f19806b5"
-        },
-        "date": 1617739187057,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 3225759.6392866326,
-            "unit": "iter/sec",
-            "range": "stddev: 7.793114483802381e-7",
-            "extra": "mean: 310.00449872981034 nsec\nrounds: 42921"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 7179584.522103138,
-            "unit": "iter/sec",
-            "range": "stddev: 1.9178831497895065e-7",
-            "extra": "mean: 139.2838258149944 nsec\nrounds: 102041"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 420505.1442355859,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000006714948366541682",
-            "extra": "mean: 2.378092191518492 usec\nrounds: 57143"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 1874996.8018572233,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000002981416099054062",
-            "extra": "mean: 533.3342430287925 nsec\nrounds: 181819"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "owais@users.noreply.github.com",
             "name": "Owais Lone",
             "username": "owais"
@@ -23928,6 +23876,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 4.2152927257752225e-7",
             "extra": "mean: 405.6396790633204 nsec\nrounds: 196079"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "enruizno@edu.uwaterloo.ca",
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b8fe7fc7cd900174b34fa6b172735a29c2e0a195",
+          "message": "EKS Detector should return empty string, not resource if env var missing (#613)\n\n* EKS Detector returns string if missing env var\r\n\r\n* Update sdk-extension/opentelemetry-sdk-extension-aws/src/opentelemetry/sdk/extension/aws/resource/eks.py\r\n\r\nAdd return value typing to _get_cluster_name method\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2021-08-13T17:14:41-04:00",
+          "tree_id": "bdd1b77bb5a02974686df71b75268c5de5612ab2",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b8fe7fc7cd900174b34fa6b172735a29c2e0a195"
+        },
+        "date": 1628889355775,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4407796.15334906,
+            "unit": "iter/sec",
+            "range": "stddev: 3.7902538365100896e-8",
+            "extra": "mean: 226.87074565372842 nsec\nrounds: 50506"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8776251.817831162,
+            "unit": "iter/sec",
+            "range": "stddev: 3.109253422010369e-8",
+            "extra": "mean: 113.94385903651231 nsec\nrounds: 102041"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 1432295.6131556772,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000012072477715011",
+            "extra": "mean: 698.1798944400592 nsec\nrounds: 175439"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 2472082.8092524107,
+            "unit": "iter/sec",
+            "range": "stddev: 6.078594814639642e-7",
+            "extra": "mean: 404.51719346020315 nsec\nrounds: 188680"
           }
         ]
       }
