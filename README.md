@@ -70,19 +70,20 @@ pip install -e ./instrumentation/opentelemetry-instrumentation-{integration}
 
 Maintainers aim to periodically release new versions of the packages in `opentelemetry-python-contrib`.
 
-Contributions that enhance OTel for Python are welcome to be hosted upstream for the benefit of group collaboration. However, as a general rule, releases for packages in `opentelemetry-python-contrib` will be in a perpetual `~=0.X.0` (pre-1.0) version state. This is because maintainers and approvers cannot feasibly provide the stability guarantees that are implied with a 1.0 release for so many packages.
+Contributions that enhance OTel for Python are welcome to be hosted upstream for the benefit of group collaboration. However, as a general rule, releases for packages in `opentelemetry-python-contrib` will be in a perpetual `~=0.X.0` (pre-1.0) version state until the maintainers are comfortable with publishing a package as `1.0` stable. However given that there are many packages, we ask for your patience as we go through the steps to provide stable releases.
 
-To resolve this, members of the community are encouraged to commit to becoming a CODEOWNER for packages in `-contrib` that they feel experienced enough to maintain. CODEOWNERS can then follow the checklist below to release `-contrib` packages as 1.0 stable:
+One way members of the community are encouraged to help the release effort is by submitting an issue to become a CODEOWNER for packages in `-contrib` that they feel experienced enough to maintain. The responsibilities of a CODEOWNER is found in [CODEOWNERS](.github/CODEOWNERS). Having a CODEOWNER is not a requirement, but is helpful towards getting ready for stable releases. When a CODEOWNER no longer feels like they have the bandwidth to meet the responsibilities of maintaining the package, it's not a problem at all, life happens! However, if that is the case, we ask that the CODEOWNER please raise an issue indicating that they would like to be removed as a CODEOWNER so that they don't get pinged on future PRs. Ultimately, we hope to use that issue to find a new CODEOWNER.
+
+
+Beyond this, maintainers use the following (subject to change) checklist when deciding if a package is ready for a `1.0` stable release so helping these requirements be met is another way to quicken the stable version release process.
 
 ### Releasing a package as `1.0` stable
 
 To release a package as `1.0` stable, the package MUST...:
-- [ ] Have a CODEOWNER. Submit an issue to become a CODEOWNER of a package and explain why you meet the responsibilities found in [CODEOWNERS](.github/CODEOWNERS)
 - [ ] Have unit tests that cover all supported versions of the instrumented library
   - e.g. Instrumentation packages might use different techniques to instrument different major versions of python packages
 - [ ] Have clear documentation for non-obvious usages of the package
   - e.g. If an instrumentation package uses flags, a token as context, or parameters that are not typical of the `BaseInstrumentor` class, these are documented
-- [ ] After `1.0`, a CODEOWNER may no longer feel like they have the bandwidth to meet the responsibilities of maintaining the package. That's not a problem at all, life happens! However, if that is the case, we ask that the CODEOWNER please raise an issue indicating that they would like to be removed as a CODEOWNER so that they don't get pinged on future PRs. Ultimately, we hope to use that issue to find a new CODEOWNER.
 
 ## Contributing
 
