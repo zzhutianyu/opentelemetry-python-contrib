@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1632926065475,
+  "lastUpdate": 1632926076295,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28506,6 +28506,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000011747841915929433",
             "extra": "mean: 2.4262173842939574 usec\nrounds: 23"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "anthony.p.shaw@gmail.com",
+            "name": "Anthony Shaw",
+            "username": "tonybaloney"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bba4b9e76f8e3e24c70c5a44750804599250bace",
+          "message": "Add a rich console exporter (#686)\n\n* Add a rich console exporter\r\n\r\n* be more lenient on missing parent spans\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\n\r\n* run black over source\r\n\r\n* patch change by hand\r\n\r\n* update changelog\r\n\r\n* remove defunct statement\r\n\r\n* Clarify the simple/batch span processor\r\n\r\n* fix f-strings that dont have formatting\r\n\r\n* clarify span usage and update classifiers\r\n\r\n* make child_to_tree a private function and rename some variables\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>\r\nCo-authored-by: alrex <aboten@lightstep.com>",
+          "timestamp": "2021-09-29T14:32:01Z",
+          "tree_id": "ba62e4ebcb8822797657c795693652eea9f97f47",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/bba4b9e76f8e3e24c70c5a44750804599250bace"
+        },
+        "date": 1632926073271,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1087413.7205317253,
+            "unit": "iter/sec",
+            "range": "stddev: 3.8242463241958145e-7",
+            "extra": "mean: 919.6131896432375 nsec\nrounds: 76924"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1627821.2081293163,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000108837907037195",
+            "extra": "mean: 614.3180805152396 nsec\nrounds: 140826"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 167516.7252744269,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002862748677042723",
+            "extra": "mean: 5.969553179611134 usec\nrounds: 16181"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 339267.5390824339,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022406645581249704",
+            "extra": "mean: 2.94752631714944 usec\nrounds: 38"
           }
         ]
       }
