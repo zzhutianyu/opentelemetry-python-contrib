@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1632926083311,
+  "lastUpdate": 1632926088559,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10410,58 +10410,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "srikanth.chekuri92@gmail.com",
-            "name": "Srikanth Chekuri",
-            "username": "lonewolf3739"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "370952f68495bc5542885ddf7067986fb339c21f",
-          "message": "Remove http.status_text from span attributes (#406)",
-          "timestamp": "2021-04-08T09:40:20-07:00",
-          "tree_id": "6cdc285b080766c7f6705da8c52397679e65dd14",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/370952f68495bc5542885ddf7067986fb339c21f"
-        },
-        "date": 1617900064091,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1038417.9485203018,
-            "unit": "iter/sec",
-            "range": "stddev: 3.054096097949458e-7",
-            "extra": "mean: 963.0033855105781 nsec\nrounds: 80639"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1449477.132489588,
-            "unit": "iter/sec",
-            "range": "stddev: 4.6440623798839694e-7",
-            "extra": "mean: 689.9039505938416 nsec\nrounds: 158731"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 47582.47062797635,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000013570852393973251",
-            "extra": "mean: 21.01614285265896 usec\nrounds: 7"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 220916.2297409623,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00004498801200185703",
-            "extra": "mean: 4.526602690859611 usec\nrounds: 39838"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "owais@users.noreply.github.com",
             "name": "Owais Lone",
             "username": "owais"
@@ -15604,6 +15552,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000030588926144790896",
             "extra": "mean: 5.215842105449634 usec\nrounds: 19"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "anthony.p.shaw@gmail.com",
+            "name": "Anthony Shaw",
+            "username": "tonybaloney"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bba4b9e76f8e3e24c70c5a44750804599250bace",
+          "message": "Add a rich console exporter (#686)\n\n* Add a rich console exporter\r\n\r\n* be more lenient on missing parent spans\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\n\r\n* run black over source\r\n\r\n* patch change by hand\r\n\r\n* update changelog\r\n\r\n* remove defunct statement\r\n\r\n* Clarify the simple/batch span processor\r\n\r\n* fix f-strings that dont have formatting\r\n\r\n* clarify span usage and update classifiers\r\n\r\n* make child_to_tree a private function and rename some variables\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>\r\nCo-authored-by: alrex <aboten@lightstep.com>",
+          "timestamp": "2021-09-29T14:32:01Z",
+          "tree_id": "ba62e4ebcb8822797657c795693652eea9f97f47",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/bba4b9e76f8e3e24c70c5a44750804599250bace"
+        },
+        "date": 1632926085125,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 980273.0661630945,
+            "unit": "iter/sec",
+            "range": "stddev: 3.8759398337062735e-7",
+            "extra": "mean: 1.020123917016428 usec\nrounds: 73525"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1359209.9686343325,
+            "unit": "iter/sec",
+            "range": "stddev: 3.102105586736675e-7",
+            "extra": "mean: 735.7215022523347 nsec\nrounds: 97078"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 119086.88373051981,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000014240798592846905",
+            "extra": "mean: 8.397230397454075 usec\nrounds: 12422"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 202922.07842712486,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001939864944015038",
+            "extra": "mean: 4.927999987734842 usec\nrounds: 18"
           }
         ]
       }
