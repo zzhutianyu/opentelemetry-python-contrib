@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1632856436647,
+  "lastUpdate": 1632926065475,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "9e996185d1daaa13bbb98e9bbbd8f6504f3c3254",
-          "message": "Adds support for request and response hooks to Falcon instrumentation. (#415)",
-          "timestamp": "2021-04-13T09:30:11-07:00",
-          "tree_id": "8a06a60ddea05c60f838854e290e4a590eba9f83",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9e996185d1daaa13bbb98e9bbbd8f6504f3c3254"
-        },
-        "date": 1618331462787,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1241657.9936014651,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000001502248986719383",
-            "extra": "mean: 805.374753074694 nsec\nrounds: 96154"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1705945.1549249669,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000013355322318988837",
-            "extra": "mean: 586.1853161650929 nsec\nrounds: 181819"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 115452.75395239,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000004131879578783856",
-            "extra": "mean: 8.661551723680637 usec\nrounds: 174"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 482887.19689949683,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000004294304053865949",
-            "extra": "mean: 2.0708770214260404 usec\nrounds: 76924"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5200,6 +5148,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000011030986380874896",
             "extra": "mean: 2.5653478293525436 usec\nrounds: 23"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "anthony.p.shaw@gmail.com",
+            "name": "Anthony Shaw",
+            "username": "tonybaloney"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bba4b9e76f8e3e24c70c5a44750804599250bace",
+          "message": "Add a rich console exporter (#686)\n\n* Add a rich console exporter\r\n\r\n* be more lenient on missing parent spans\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\n\r\n* run black over source\r\n\r\n* patch change by hand\r\n\r\n* update changelog\r\n\r\n* remove defunct statement\r\n\r\n* Clarify the simple/batch span processor\r\n\r\n* fix f-strings that dont have formatting\r\n\r\n* clarify span usage and update classifiers\r\n\r\n* make child_to_tree a private function and rename some variables\r\n\r\nCo-authored-by: Aaron Abbott <aaronabbott@google.com>\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>\r\nCo-authored-by: alrex <aboten@lightstep.com>",
+          "timestamp": "2021-09-29T14:32:01Z",
+          "tree_id": "ba62e4ebcb8822797657c795693652eea9f97f47",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/bba4b9e76f8e3e24c70c5a44750804599250bace"
+        },
+        "date": 1632926062726,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1252566.3187304896,
+            "unit": "iter/sec",
+            "range": "stddev: 7.286176114802271e-7",
+            "extra": "mean: 798.3609211315273 nsec\nrounds: 83334"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1844607.3560193554,
+            "unit": "iter/sec",
+            "range": "stddev: 3.380964876681337e-7",
+            "extra": "mean: 542.120791580269 nsec\nrounds: 89286"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 194712.7178110179,
+            "unit": "iter/sec",
+            "range": "stddev: 3.4425829089968894e-7",
+            "extra": "mean: 5.135771362251585 usec\nrounds: 15015"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 461159.45139038155,
+            "unit": "iter/sec",
+            "range": "stddev: 8.995760244082498e-7",
+            "extra": "mean: 2.1684473710449406 usec\nrounds: 38"
           }
         ]
       }
