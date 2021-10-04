@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633363433552,
+  "lastUpdate": 1633363436062,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28662,6 +28662,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000015023153018313416",
             "extra": "mean: 2.8138636364810115 usec\nrounds: 22"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "remi@rampin.org",
+            "name": "Remi Rampin",
+            "username": "remram44"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3b5071b5a37452ed8fb7711321bb9669459dd438",
+          "message": "Tornado attributes (#706)\n\n* Remove duplicate HTTP_HOST\r\n\r\n* Set http.client_ip instead of net.peer.ip\r\n\r\nTornado sets remote_ip to the value of X-Forwarded-For or X-Real-IP if\r\nthe 'xheaders' setting is set.\r\n\r\n* Add a \"handler\" attribute, with full class name\r\n\r\nThe spec has a 'http.route' which unfortunately seems difficult to get\r\nat. However the full class name is readily available and most helpful.\r\n\r\n* Add net.peer.ip from _orig_remote_ip\r\n\r\n* Address review comments\r\n\r\n- Don't set NET_PEER_IP if '_orig_remote_ip' is not set\r\n- Add a comment about the difference between the attributes\r\n\r\n* Make \"handler\" attribute into \"tornado.handler\"\r\n\r\n* Add CHANGELOG entry\r\n\r\n* Add test with X-Forwarded-For\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2021-10-04T21:31:30+05:30",
+          "tree_id": "6aef96b18ecb48ce1f1b413a799a57200f497301",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3b5071b5a37452ed8fb7711321bb9669459dd438"
+        },
+        "date": 1633363432444,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1300188.903152756,
+            "unit": "iter/sec",
+            "range": "stddev: 5.170985063657539e-7",
+            "extra": "mean: 769.1190084572753 nsec\nrounds: 90901"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1750615.0841452184,
+            "unit": "iter/sec",
+            "range": "stddev: 4.240401133198002e-7",
+            "extra": "mean: 571.2277981931562 nsec\nrounds: 185186"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 178744.91348335304,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000012358348206462588",
+            "extra": "mean: 5.594564793549398 usec\nrounds: 17093"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 363276.38922748715,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017698066778978646",
+            "extra": "mean: 2.752725004029344 usec\nrounds: 40"
           }
         ]
       }
