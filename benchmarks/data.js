@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633363436062,
+  "lastUpdate": 1633363452036,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -5208,58 +5208,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "96b0f592b7c3f93f2cb4b1d4607cf22b773e2f4c",
-          "message": "Replaced WSGI name callback with request/response hooks (#424)",
-          "timestamp": "2021-04-14T08:18:47-07:00",
-          "tree_id": "4c8fd1833f493353f7f4ffb36624b5030acacb14",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/96b0f592b7c3f93f2cb4b1d4607cf22b773e2f4c"
-        },
-        "date": 1618413635018,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 982776.3292747218,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000018434740691319712",
-            "extra": "mean: 1.0175255245901058 usec\nrounds: 58140"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1300489.875579166,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000003314247982292588",
-            "extra": "mean: 768.9410112129135 nsec\nrounds: 188680"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 91538.84215931677,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000006760153079075625",
-            "extra": "mean: 10.92432432408935 usec\nrounds: 37"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 363289.8197951133,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00002938001454729795",
-            "extra": "mean: 2.7526232377333772 usec\nrounds: 75188"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "shlee322@gmail.com",
             "name": "Vint Sanghyeok Lee",
             "username": "shlee322"
@@ -10402,6 +10350,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 7.897142268827791e-7",
             "extra": "mean: 2.42977778144551 usec\nrounds: 27"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "remi@rampin.org",
+            "name": "Remi Rampin",
+            "username": "remram44"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3b5071b5a37452ed8fb7711321bb9669459dd438",
+          "message": "Tornado attributes (#706)\n\n* Remove duplicate HTTP_HOST\r\n\r\n* Set http.client_ip instead of net.peer.ip\r\n\r\nTornado sets remote_ip to the value of X-Forwarded-For or X-Real-IP if\r\nthe 'xheaders' setting is set.\r\n\r\n* Add a \"handler\" attribute, with full class name\r\n\r\nThe spec has a 'http.route' which unfortunately seems difficult to get\r\nat. However the full class name is readily available and most helpful.\r\n\r\n* Add net.peer.ip from _orig_remote_ip\r\n\r\n* Address review comments\r\n\r\n- Don't set NET_PEER_IP if '_orig_remote_ip' is not set\r\n- Add a comment about the difference between the attributes\r\n\r\n* Make \"handler\" attribute into \"tornado.handler\"\r\n\r\n* Add CHANGELOG entry\r\n\r\n* Add test with X-Forwarded-For\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2021-10-04T21:31:30+05:30",
+          "tree_id": "6aef96b18ecb48ce1f1b413a799a57200f497301",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3b5071b5a37452ed8fb7711321bb9669459dd438"
+        },
+        "date": 1633363447828,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1038103.5385758188,
+            "unit": "iter/sec",
+            "range": "stddev: 3.5453176802450593e-7",
+            "extra": "mean: 963.2950499060111 nsec\nrounds: 78119"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1284603.2283635056,
+            "unit": "iter/sec",
+            "range": "stddev: 3.153027476208423e-7",
+            "extra": "mean: 778.4504802108663 nsec\nrounds: 85471"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 156098.034474615,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002598676963798024",
+            "extra": "mean: 6.406230567641274 usec\nrounds: 17921"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 396462.67153884226,
+            "unit": "iter/sec",
+            "range": "stddev: 9.07131925983011e-7",
+            "extra": "mean: 2.5223055580959732 usec\nrounds: 36"
           }
         ]
       }
