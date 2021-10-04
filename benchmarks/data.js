@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633363430930,
+  "lastUpdate": 1633363433552,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10410,58 +10410,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "alertedsnake@users.noreply.github.com",
-            "name": "Michael Stella",
-            "username": "alertedsnake"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e7d26a4c2dfc05b587d92fb5e64c99447bd05f65",
-          "message": "Update gRPCContext wrapper class (#420)\n\nThere are a few cases where one needs to dig into `grpc.ServicerContext`\r\nobjects, and these fields were missing from our wrapper, which can cause\r\nissues with implmementation.",
-          "timestamp": "2021-04-13T15:22:43-07:00",
-          "tree_id": "4c07c5e3097b8270030a96d0e882fa5960ff9d3f",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e7d26a4c2dfc05b587d92fb5e64c99447bd05f65"
-        },
-        "date": 1618352614668,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1002740.0292112106,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000035090467548461543",
-            "extra": "mean: 997.2674580335982 nsec\nrounds: 81968"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1356870.197157107,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00002148016688747724",
-            "extra": "mean: 736.9901720114307 nsec\nrounds: 185186"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 45004.09536624694,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000015421920770352173",
-            "extra": "mean: 22.220200003175705 usec\nrounds: 5"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 214959.2167841366,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00001476828256397569",
-            "extra": "mean: 4.65204523425579 usec\nrounds: 54052"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "owais@users.noreply.github.com",
             "name": "Owais Lone",
             "username": "owais"
@@ -15604,6 +15552,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000002163874520695492",
             "extra": "mean: 5.08823529464601 usec\nrounds: 17"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "remi@rampin.org",
+            "name": "Remi Rampin",
+            "username": "remram44"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3b5071b5a37452ed8fb7711321bb9669459dd438",
+          "message": "Tornado attributes (#706)\n\n* Remove duplicate HTTP_HOST\r\n\r\n* Set http.client_ip instead of net.peer.ip\r\n\r\nTornado sets remote_ip to the value of X-Forwarded-For or X-Real-IP if\r\nthe 'xheaders' setting is set.\r\n\r\n* Add a \"handler\" attribute, with full class name\r\n\r\nThe spec has a 'http.route' which unfortunately seems difficult to get\r\nat. However the full class name is readily available and most helpful.\r\n\r\n* Add net.peer.ip from _orig_remote_ip\r\n\r\n* Address review comments\r\n\r\n- Don't set NET_PEER_IP if '_orig_remote_ip' is not set\r\n- Add a comment about the difference between the attributes\r\n\r\n* Make \"handler\" attribute into \"tornado.handler\"\r\n\r\n* Add CHANGELOG entry\r\n\r\n* Add test with X-Forwarded-For\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2021-10-04T21:31:30+05:30",
+          "tree_id": "6aef96b18ecb48ce1f1b413a799a57200f497301",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3b5071b5a37452ed8fb7711321bb9669459dd438"
+        },
+        "date": 1633363430669,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1191928.7066317867,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016980020223814854",
+            "extra": "mean: 838.9763535655177 nsec\nrounds: 69440"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1719700.5418819461,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010039933720066729",
+            "extra": "mean: 581.4965894618226 nsec\nrounds: 172414"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 130832.5329957408,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000038645260877185816",
+            "extra": "mean: 7.643358858094986 usec\nrounds: 13699"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 257066.1042560891,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013874896254718533",
+            "extra": "mean: 3.8900500044292134 usec\nrounds: 20"
           }
         ]
       }
