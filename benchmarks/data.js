@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633550459512,
+  "lastUpdate": 1633550470108,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -18744,58 +18744,6 @@ window.BENCHMARK_DATA = {
             "username": "web-flow"
           },
           "distinct": true,
-          "id": "4aec1e448f5b538aeeb66e42ba26d5c85d59bf54",
-          "message": "Request/Response hooks for Tornado server and client (#426)",
-          "timestamp": "2021-04-16T13:30:11-07:00",
-          "tree_id": "7f14571f1ae64f999780a7ecdcf274152f6640ef",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/4aec1e448f5b538aeeb66e42ba26d5c85d59bf54"
-        },
-        "date": 1618605168448,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 2950855.8390732007,
-            "unit": "iter/sec",
-            "range": "stddev: 5.082225205953617e-7",
-            "extra": "mean: 338.88473532277794 nsec\nrounds: 39841"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 5555723.585207551,
-            "unit": "iter/sec",
-            "range": "stddev: 2.732634639148387e-7",
-            "extra": "mean: 179.99455600393222 nsec\nrounds: 83334"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 244016.85615491928,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000007288516523825578",
-            "extra": "mean: 4.0980775498768365 usec\nrounds: 46512"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 1308997.5969937055,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000004216895760725401",
-            "extra": "mean: 763.9433428269948 nsec\nrounds: 178572"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
           "id": "308369004c71a8d07c18560ac1fb46049a0a8105",
           "message": "Added opt-in support to return traceresponse headers for server instrumentations. (#436)",
           "timestamp": "2021-04-19T12:03:31-07:00",
@@ -23928,6 +23876,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 6.086227694398656e-7",
             "extra": "mean: 357.8276649567795 nsec\nrounds: 188680"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "matt.r.oberle@gmail.com",
+            "name": "Matt Oberle",
+            "username": "mattoberle"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2bcb6ae66b6d9ea63e7d9d1a1cd1065198ef8a9c",
+          "message": "Fix missing 'packaging' requirement (#713)\n\nThe `sqlalchemy` instrumentation uses the `packaging` library to parse\r\nthe `sqlalchemy` SemVer.\r\n\r\n`packaging` is not part of the standard library and should be included\r\nin the `setup.cfg` file to avoid:\r\n\r\n```\r\nModuleNotFoundError: No module named 'packaging'\r\n```\r\n\r\nCo-authored-by: Matt Oberle <mattoberle@users.noreply.github.com>\r\nCo-authored-by: Owais Lone <owais@users.noreply.github.com>",
+          "timestamp": "2021-10-06T19:56:55Z",
+          "tree_id": "499b4e11e7abe4c06353df27812f9a848a2fae0f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/2bcb6ae66b6d9ea63e7d9d1a1cd1065198ef8a9c"
+        },
+        "date": 1633550467556,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 5063253.454083718,
+            "unit": "iter/sec",
+            "range": "stddev: 3.0995370160920814e-8",
+            "extra": "mean: 197.50146996760006 nsec\nrounds: 57804"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 9977968.510074668,
+            "unit": "iter/sec",
+            "range": "stddev: 2.6836047490948913e-8",
+            "extra": "mean: 100.22080135755756 nsec\nrounds: 119048"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 1620684.4026174208,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010461753787685736",
+            "extra": "mean: 617.0232763300677 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 2887023.3555090884,
+            "unit": "iter/sec",
+            "range": "stddev: 4.5801775452773427e-7",
+            "extra": "mean: 346.3775234416977 nsec\nrounds: 192308"
           }
         ]
       }
