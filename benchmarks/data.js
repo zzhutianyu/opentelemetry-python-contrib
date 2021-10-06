@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633544721647,
+  "lastUpdate": 1633544723350,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28766,6 +28766,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000001316398404679091",
             "extra": "mean: 2.5238095235278832 usec\nrounds: 21"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "81902191+oxeye-nikolay@users.noreply.github.com",
+            "name": "Nikolay Sokolik",
+            "username": "oxeye-nikolay"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fb24599324dc871eb5c8024b8baf9aa571cd5cbf",
+          "message": "Feature/add pika instrumentation (#680)\n\n* Added initial code\r\n\r\n* Add all needed spans, and add support of instrumentation and uninstrumentation\r\n\r\n* Added tests. Ready for PR\r\n\r\n* Rename RequestsInstrumentation to RequestsInstrumentor to follow conventions\r\n\r\n* Add suppress_instrumentation functionality\r\n\r\n* Fix suppress_instrumentation functionality\r\n\r\n* Fix CR comments and lint test failures\r\n\r\n* Add usage of wrapt according to CR comments\r\n\r\n* Fix according to CR Comments\r\n\r\n* Move the tracer to be an attribute of the instrumentor instead of the channel\r\n\r\n* Fix Tests\r\n\r\n* Update Changelog and fix failing test\r\n\r\n* update code using tox -e generate\r\n\r\n* Update the name of the variable to store the tracer provider.\r\n\r\n* Update the core repo hash in the workflow\r\n\r\n* Update the core repo hash in the workflow\r\n\r\nCo-authored-by: Leighton Chen <lechen@microsoft.com>\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>\r\nCo-authored-by: Owais Lone <owais@users.noreply.github.com>",
+          "timestamp": "2021-10-06T23:52:39+05:30",
+          "tree_id": "520d1414c4fe00ff3d3628ee4eecddc18f40fc29",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/fb24599324dc871eb5c8024b8baf9aa571cd5cbf"
+        },
+        "date": 1633544719239,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1102659.4842997503,
+            "unit": "iter/sec",
+            "range": "stddev: 9.718772006233807e-7",
+            "extra": "mean: 906.8982893073787 nsec\nrounds: 77514"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1522591.2970531206,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011811787256743306",
+            "extra": "mean: 656.7750662541135 nsec\nrounds: 136987"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 146018.3431637082,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022569014970890907",
+            "extra": "mean: 6.848454641612061 usec\nrounds: 13228"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 381347.85313612095,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001297262339507678",
+            "extra": "mean: 2.6222777754646307 usec\nrounds: 36"
           }
         ]
       }
