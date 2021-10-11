@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633962245318,
+  "lastUpdate": 1633962246660,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28974,6 +28974,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000003013997105708631",
             "extra": "mean: 2.7232790724282983 usec\nrounds: 43"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "81902191+oxeye-nikolay@users.noreply.github.com",
+            "name": "Nikolay Sokolik",
+            "username": "oxeye-nikolay"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "492830f24f7459881866202a8e0c7d264ae0062c",
+          "message": "Bugfix/set default context in pika (#719)\n\n* Add a default context when one does not exist\r\n\r\n* Split the if to fit C0325: Unnecessary parens after 'not' keyword\r\n\r\n* Split the context retrieving according to the function",
+          "timestamp": "2021-10-11T19:53:19+05:30",
+          "tree_id": "7eca67bd6283e51bf3c48263545803d9d8a63766",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/492830f24f7459881866202a8e0c7d264ae0062c"
+        },
+        "date": 1633962241641,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1074634.869834799,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5951229847761033e-7",
+            "extra": "mean: 930.5486245330263 nsec\nrounds: 78119"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1568596.1027107213,
+            "unit": "iter/sec",
+            "range": "stddev: 1.357530065186262e-7",
+            "extra": "mean: 637.5127403873314 nsec\nrounds: 138889"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 166614.0294730361,
+            "unit": "iter/sec",
+            "range": "stddev: 3.623119854764059e-7",
+            "extra": "mean: 6.001895537625388 usec\nrounds: 16695"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 364182.63743979065,
+            "unit": "iter/sec",
+            "range": "stddev: 9.408389560655266e-7",
+            "extra": "mean: 2.7458750011533084 usec\nrounds: 24"
           }
         ]
       }
