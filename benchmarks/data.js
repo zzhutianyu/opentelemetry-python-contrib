@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634077842100,
+  "lastUpdate": 1634077846324,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -23586,58 +23586,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "mihirg@gmail.com",
-            "name": "Mihir Gore",
-            "username": "mihirg"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "c12591ee6594817e74e49bca34408c97b479d846",
-          "message": "Keep client interceptors in sync with grpc client interceptors (#442)",
-          "timestamp": "2021-05-07T08:49:10-07:00",
-          "tree_id": "1266dcd0f6d919279307e5f9593ea2ccef05d4a7",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/c12591ee6594817e74e49bca34408c97b479d846"
-        },
-        "date": 1620402605788,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1121262.0883657234,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000018160110615687236",
-            "extra": "mean: 891.8521462341897 nsec\nrounds: 99010"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1547538.011781383,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000012643460169316674",
-            "extra": "mean: 646.1876815865041 nsec\nrounds: 185186"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 96922.6295851387,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000009409007847058441",
-            "extra": "mean: 10.31750793679799 usec\nrounds: 126"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 416539.814964875,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000009345361009280605",
-            "extra": "mean: 2.4007308883169443 usec\nrounds: 74627"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "aboten@lightstep.com",
             "name": "alrex",
             "username": "codeboten"
@@ -28696,6 +28644,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.3497977961735284e-7",
             "extra": "mean: 634.6109691836396 nsec\nrounds: 142837"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "remi@rampin.org",
+            "name": "Remi Rampin",
+            "username": "remram44"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1b75672e736c7cb45a13600f89da90c27a697667",
+          "message": "Don't create Elasticsearch span names containing document IDs (#705)\n\n* Fix typo: _DEFALT_OP_NAME\r\n\r\n* Extract ES document ID from URL, put in attributes\r\n\r\nElasticsearch creates URLs for index() and delete() before they hit\r\nperform_request(). This means there would be many unique span names\r\ncontaining unique document IDs, of the form\r\n'Elasticsearch/indexname/_doc/documentid'.\r\n\r\nThis extracts the document ID from the URL and replaces it with ':id',\r\nthen puts it in the span's attributes.\r\n\r\n* Add TODO comment with link to issue\r\n\r\n* Add CHANGELOG entry\r\n\r\n* Don't use custom doc types, deprecated in ES 7\r\n\r\n* Update tests to match instrumentation",
+          "timestamp": "2021-10-13T04:00:00+05:30",
+          "tree_id": "3ea5985339b58cee621e4ad358e1c8c7ebe69cdb",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/1b75672e736c7cb45a13600f89da90c27a697667"
+        },
+        "date": 1634077842227,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1041515.8406004185,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4493204109446152e-7",
+            "extra": "mean: 960.1390214319878 nsec\nrounds: 58473"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1514439.7793539853,
+            "unit": "iter/sec",
+            "range": "stddev: 1.30803989876016e-7",
+            "extra": "mean: 660.3101778180775 nsec\nrounds: 163935"
           }
         ]
       }
