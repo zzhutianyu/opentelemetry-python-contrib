@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634052009548,
+  "lastUpdate": 1634052011428,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "ocelotl@users.noreply.github.com",
-            "name": "Diego Hurtado",
-            "username": "ocelotl"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "bdbc249ff0bc2c5a17b333fd5dcb07c20a2e8b31",
-          "message": "Use traceflags object (#472)",
-          "timestamp": "2021-04-27T11:06:24-07:00",
-          "tree_id": "7293f9c057e86457ff26abacd0c464946d30381f",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/bdbc249ff0bc2c5a17b333fd5dcb07c20a2e8b31"
-        },
-        "date": 1619546828991,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1093162.355023041,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000003662082185800302",
-            "extra": "mean: 914.7772015794698 nsec\nrounds: 49749"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1574223.268511964,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000001166429706518112",
-            "extra": "mean: 635.2339086851708 nsec\nrounds: 144907"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 82067.9218739257,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00003502083551725998",
-            "extra": "mean: 12.185028902476889 usec\nrounds: 173"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 457106.7558869796,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000033060101481109932",
-            "extra": "mean: 2.1876727637936106 usec\nrounds: 63691"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5200,6 +5148,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.143588140459137e-7",
             "extra": "mean: 1.8760399993311694 usec\nrounds: 25"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b41a91713efa584582b4a55676255cbac7f660e0",
+          "message": "Fix mssql docker tests v4 (#727)\n\n* Remove unneded CI steps\r\n\r\nThese were not really needed and got in by mistake.\r\n\r\n* Fix broken mssql integration tests\r\n\r\nWe were giving mssql server 10 seconds to start before creating the test\r\ndatabase. It now takes Github CI more than 10 seconds to start the mssql\r\nserver. Instead of increasing the leeway with guesses, this commit moves\r\nthe creation of test database from docker compose to the python test suite.\r\nThis allows the docker image to come up first and then create the DB\r\ninside the test suite with proper retry mechanism that is already in\r\nplace.",
+          "timestamp": "2021-10-12T17:19:13+02:00",
+          "tree_id": "f92a28c960bfe3ca09f8605f95502a70d08bce46",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b41a91713efa584582b4a55676255cbac7f660e0"
+        },
+        "date": 1634052006292,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1027421.8725749763,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000003917967643647085",
+            "extra": "mean: 973.310016744874 nsec\nrounds: 62116"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1533545.341844152,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011927234003033517",
+            "extra": "mean: 652.083751757518 nsec\nrounds: 158731"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 147831.06751755447,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000006548049438710634",
+            "extra": "mean: 6.764477973354642 usec\nrounds: 14369"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 379753.70233321836,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011837637938856012",
+            "extra": "mean: 2.633285716125924 usec\nrounds: 21"
           }
         ]
       }
