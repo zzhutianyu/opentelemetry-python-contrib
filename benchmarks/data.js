@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634051998747,
+  "lastUpdate": 1634052004598,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10410,58 +10410,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "mustin.eric@gmail.com",
-            "name": "Eric Mustin",
-            "username": "ericmustin"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "45c94e765d2ade0ea12b700faf10dfde419e32a9",
-          "message": "Update datadog exporter error tagging (#459)",
-          "timestamp": "2021-04-27T09:42:28-07:00",
-          "tree_id": "f68c36d13e516a738022f9d3404324b473eb0ae0",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/45c94e765d2ade0ea12b700faf10dfde419e32a9"
-        },
-        "date": 1619541790430,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1043415.8555421882,
-            "unit": "iter/sec",
-            "range": "stddev: 3.1970756606663127e-7",
-            "extra": "mean: 958.3906499871731 nsec\nrounds: 80000"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1416631.6542408213,
-            "unit": "iter/sec",
-            "range": "stddev: 2.524481741611579e-7",
-            "extra": "mean: 705.8997990101415 nsec\nrounds: 156226"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 75013.25815623418,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000041422445396531215",
-            "extra": "mean: 13.330976744367584 usec\nrounds: 43"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 230849.97285291174,
-            "unit": "iter/sec",
-            "range": "stddev: 9.640389417652313e-7",
-            "extra": "mean: 4.3318177067196775 usec\nrounds: 51280"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "ocelotl@users.noreply.github.com",
             "name": "Diego Hurtado",
             "username": "ocelotl"
@@ -15604,6 +15552,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000017657692874236416",
             "extra": "mean: 4.650000000260156 usec\nrounds: 18"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b41a91713efa584582b4a55676255cbac7f660e0",
+          "message": "Fix mssql docker tests v4 (#727)\n\n* Remove unneded CI steps\r\n\r\nThese were not really needed and got in by mistake.\r\n\r\n* Fix broken mssql integration tests\r\n\r\nWe were giving mssql server 10 seconds to start before creating the test\r\ndatabase. It now takes Github CI more than 10 seconds to start the mssql\r\nserver. Instead of increasing the leeway with guesses, this commit moves\r\nthe creation of test database from docker compose to the python test suite.\r\nThis allows the docker image to come up first and then create the DB\r\ninside the test suite with proper retry mechanism that is already in\r\nplace.",
+          "timestamp": "2021-10-12T17:19:13+02:00",
+          "tree_id": "f92a28c960bfe3ca09f8605f95502a70d08bce46",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b41a91713efa584582b4a55676255cbac7f660e0"
+        },
+        "date": 1634051999519,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 979200.1302363063,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017094534646320126",
+            "extra": "mean: 1.0212416942373914 usec\nrounds: 71938"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1346883.4762370724,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000006190968009519304",
+            "extra": "mean: 742.4547242897384 nsec\nrounds: 142858"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 103626.9740374418,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000007296404904681084",
+            "extra": "mean: 9.649997110199193 usec\nrounds: 13496"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 187016.64449579708,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002286933807040487",
+            "extra": "mean: 5.34711764664601 usec\nrounds: 17"
           }
         ]
       }
