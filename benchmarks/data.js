@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634065740397,
+  "lastUpdate": 1634065743026,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "9199e3cb3e56d51ce3dd69e5fbb757a54857778f",
-          "message": "Load instrumentors via Distro (#480)\n\nThis commit makes the following changes:\r\n\r\n- Introduces a new `load_instrumentor(EntryPoint) -> None:` with a\r\ndefault implementation method to the `BaseDistro` class.\r\n- The default implementation loads the insrumentor from the provided\r\nentry point and calls applies it without any arguments. (same as before)\r\n- sitecustomize now calls Distro's `load_instrumentor` method to load\r\nand activate an instrumentor instead of doing it directly.\r\n- Added a new `DefaultDistro` implementation which is used if not distro\r\nis found by entry points.",
-          "timestamp": "2021-05-04T11:53:08-07:00",
-          "tree_id": "743ff946384c8f11b2f05a9c46e836b5e08c5cb8",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9199e3cb3e56d51ce3dd69e5fbb757a54857778f"
-        },
-        "date": 1620154431663,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1480123.9325911782,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000011358259456007562",
-            "extra": "mean: 675.6191005231234 nsec\nrounds: 58480"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 2822004.603677868,
-            "unit": "iter/sec",
-            "range": "stddev: 5.137376471415753e-7",
-            "extra": "mean: 354.35803283100523 nsec\nrounds: 147059"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 107493.3165937587,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000005377906149116117",
-            "extra": "mean: 9.30290395429163 usec\nrounds: 177"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 491680.6175979433,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000026923421388297075",
-            "extra": "mean: 2.033840595314496 usec\nrounds: 82645"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5144,6 +5092,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.965145390143959e-8",
             "extra": "mean: 485.75089516129333 nsec\nrounds: 163935"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nathanielruiz98@gmail.com",
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "78f887ef3d4aa21478e0f3e577b975c6381a55b4",
+          "message": "Better file naming for AWS XRay Propagator + Add NathanielRN as Propagator owner (#729)",
+          "timestamp": "2021-10-12T19:08:16Z",
+          "tree_id": "308fd0e4470073824fdcbb259d05b86232ed4c59",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/78f887ef3d4aa21478e0f3e577b975c6381a55b4"
+        },
+        "date": 1634065738368,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1069357.0005134991,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002243783277879724",
+            "extra": "mean: 935.1413976060434 nsec\nrounds: 75758"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1404288.866259703,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002427244211523389",
+            "extra": "mean: 712.1042002301714 nsec\nrounds: 151516"
           }
         ]
       }
