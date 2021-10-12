@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634052620582,
+  "lastUpdate": 1634052622273,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -23936,58 +23936,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "srikanth.chekuri92@gmail.com",
-            "name": "Srikanth Chekuri",
-            "username": "lonewolf3739"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "3ec77360cb20482b08b30312a6bedc8b946e3fa1",
-          "message": "Update instrumentations to use tracer_provider for creating tracer if given, otherwise use global tracer provider (#402)",
-          "timestamp": "2021-04-28T08:36:37-07:00",
-          "tree_id": "b08bf8dc444622110ed39596e14b4dd8d7e669a3",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3ec77360cb20482b08b30312a6bedc8b946e3fa1"
-        },
-        "date": 1619624257470,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1095667.7366804993,
-            "unit": "iter/sec",
-            "range": "stddev: 3.1190002600480085e-7",
-            "extra": "mean: 912.6854488110237 nsec\nrounds: 97078"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1559020.750651751,
-            "unit": "iter/sec",
-            "range": "stddev: 1.9065926621196277e-7",
-            "extra": "mean: 641.4282809141241 nsec\nrounds: 192271"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 115876.46640852946,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000028922826793383056",
-            "extra": "mean: 8.629880000607196 usec\nrounds: 150"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 439433.4125431508,
-            "unit": "iter/sec",
-            "range": "stddev: 3.97203289124447e-7",
-            "extra": "mean: 2.2756576342537533 usec\nrounds: 68494"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "daisuketaniwaki@gmail.com",
             "name": "Daisuke Taniwaki",
             "username": "dtaniwaki"
@@ -29130,6 +29078,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000013041731676716612",
             "extra": "mean: 2.7600666669513885 usec\nrounds: 30"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "mario.jonke@dynatrace.com",
+            "name": "Mario Jonke",
+            "username": "mariojonke"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c3df816ad8a9cb3954ef02037eda4279013d8a51",
+          "message": "botocore: Introduce instrumentation extensions (#718)\n\n* botocore: Introduce instrumentation extensions\r\n\r\n* add extensions that are invoked before and after an AWS SDK\r\n  service call to enrich the span with service specific request and\r\n  response attirbutes\r\n* move SQS specific parts to a separate extension\r\n\r\n* changelog\r\n\r\nCo-authored-by: Owais Lone <owais@users.noreply.github.com>\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2021-10-12T15:29:35Z",
+          "tree_id": "1891da424d85dfb9478f4d9caa0dbf6edcea9a16",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/c3df816ad8a9cb3954ef02037eda4279013d8a51"
+        },
+        "date": 1634052617562,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1070320.7303965744,
+            "unit": "iter/sec",
+            "range": "stddev: 3.325194592880989e-7",
+            "extra": "mean: 934.299384848391 nsec\nrounds: 75752"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1573392.1140383515,
+            "unit": "iter/sec",
+            "range": "stddev: 3.0447411234864677e-7",
+            "extra": "mean: 635.5694750708691 nsec\nrounds: 138870"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 170391.07175429247,
+            "unit": "iter/sec",
+            "range": "stddev: 9.85785213825412e-7",
+            "extra": "mean: 5.8688521041878365 usec\nrounds: 14970"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 373965.49745891336,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010951277837585705",
+            "extra": "mean: 2.6740434793984367 usec\nrounds: 23"
           }
         ]
       }
