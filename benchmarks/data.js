@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634052004598,
+  "lastUpdate": 1634052009548,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -23936,58 +23936,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "ocelotl@users.noreply.github.com",
-            "name": "Diego Hurtado",
-            "username": "ocelotl"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "bdbc249ff0bc2c5a17b333fd5dcb07c20a2e8b31",
-          "message": "Use traceflags object (#472)",
-          "timestamp": "2021-04-27T11:06:24-07:00",
-          "tree_id": "7293f9c057e86457ff26abacd0c464946d30381f",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/bdbc249ff0bc2c5a17b333fd5dcb07c20a2e8b31"
-        },
-        "date": 1619546827496,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1376668.030722168,
-            "unit": "iter/sec",
-            "range": "stddev: 4.358992080416782e-7",
-            "extra": "mean: 726.3915320786691 nsec\nrounds: 92585"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 2817712.3834763356,
-            "unit": "iter/sec",
-            "range": "stddev: 7.945547026858984e-8",
-            "extra": "mean: 354.89782628777846 nsec\nrounds: 161291"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 129707.86818843195,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000002302020586768546",
-            "extra": "mean: 7.709632530135017 usec\nrounds: 166"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 503800.00625199877,
-            "unit": "iter/sec",
-            "range": "stddev: 7.611343281431872e-7",
-            "extra": "mean: 1.984914624037944 usec\nrounds: 69926"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "srikanth.chekuri92@gmail.com",
             "name": "Srikanth Chekuri",
             "username": "lonewolf3739"
@@ -29130,6 +29078,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000010729800677028192",
             "extra": "mean: 2.4791666675128 usec\nrounds: 24"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b41a91713efa584582b4a55676255cbac7f660e0",
+          "message": "Fix mssql docker tests v4 (#727)\n\n* Remove unneded CI steps\r\n\r\nThese were not really needed and got in by mistake.\r\n\r\n* Fix broken mssql integration tests\r\n\r\nWe were giving mssql server 10 seconds to start before creating the test\r\ndatabase. It now takes Github CI more than 10 seconds to start the mssql\r\nserver. Instead of increasing the leeway with guesses, this commit moves\r\nthe creation of test database from docker compose to the python test suite.\r\nThis allows the docker image to come up first and then create the DB\r\ninside the test suite with proper retry mechanism that is already in\r\nplace.",
+          "timestamp": "2021-10-12T17:19:13+02:00",
+          "tree_id": "f92a28c960bfe3ca09f8605f95502a70d08bce46",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b41a91713efa584582b4a55676255cbac7f660e0"
+        },
+        "date": 1634052004322,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1405283.7119385013,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001111175841771269",
+            "extra": "mean: 711.6000786919833 nsec\nrounds: 81301"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 2688477.3489920874,
+            "unit": "iter/sec",
+            "range": "stddev: 5.257605362141224e-7",
+            "extra": "mean: 371.9577553348433 nsec\nrounds: 133334"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
+            "value": 196165.8767755194,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001032939095654819",
+            "extra": "mean: 5.097726558958778 usec\nrounds: 13246"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
+            "value": 362310.0890909069,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013041731676716612",
+            "extra": "mean: 2.7600666669513885 usec\nrounds: 30"
           }
         ]
       }
