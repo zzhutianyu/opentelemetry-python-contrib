@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634061016568,
+  "lastUpdate": 1634061024144,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -18566,58 +18566,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "lechen@microsoft.com",
-            "name": "Leighton Chen",
-            "username": "lzchen"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "01db88bfe8f2ce1d2586067f5069224a32ea450d",
-          "message": "Add expectation excerpt in contributing.md for instrumentations (#482)",
-          "timestamp": "2021-05-03T14:51:26-07:00",
-          "tree_id": "9dddc1691764a2f56366dedd514551ea69a514f3",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/01db88bfe8f2ce1d2586067f5069224a32ea450d"
-        },
-        "date": 1620078762042,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 3794211.8354699314,
-            "unit": "iter/sec",
-            "range": "stddev: 2.2861337366406431e-7",
-            "extra": "mean: 263.5593486509412 nsec\nrounds: 43479"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 7927802.288108581,
-            "unit": "iter/sec",
-            "range": "stddev: 1.2679410375983662e-7",
-            "extra": "mean: 126.13836264558168 nsec\nrounds: 95239"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 517575.9265211228,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000006124715128774482",
-            "extra": "mean: 1.9320836784691342 usec\nrounds: 63695"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 2450852.837645822,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000011094332034928116",
-            "extra": "mean: 408.0212343398483 nsec\nrounds: 192308"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "owais@users.noreply.github.com",
             "name": "Owais Lone",
             "username": "owais"
@@ -23718,6 +23666,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.945400707169707e-8",
             "extra": "mean: 134.43189769871617 nsec\nrounds: 109891"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jfmyers9@protonmail.com",
+            "name": "Jim Myers",
+            "username": "jfmyers9"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e8af7a3339cb026c68915abf2a086b8bbc4df44f",
+          "message": "Respect provided tracer provider when instrumenting SQLAlchemy (#728)\n\n* respect provided tracer provider when instrumenting sqlalchemy\r\n\r\nThis change updates the SQLALchemyInstrumentor to respect the tracer\r\nprovider that is passed in through the kwargs when patching the\r\n`create_engine` functionality provided by SQLAlchemy. Previously, it\r\nwould default to the global tracer provider.\r\n\r\n* feedback: pass in tracer_provider directly rather than kwargs\r\n\r\n* feedback: update changelog\r\n\r\n* build: lint",
+          "timestamp": "2021-10-12T17:49:22Z",
+          "tree_id": "91d7f20297288006135c20b79086da10b069eb77",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e8af7a3339cb026c68915abf2a086b8bbc4df44f"
+        },
+        "date": 1634061020800,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4383315.464379613,
+            "unit": "iter/sec",
+            "range": "stddev: 4.1064781586489276e-8",
+            "extra": "mean: 228.13781214842965 nsec\nrounds: 49752"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8298551.163925011,
+            "unit": "iter/sec",
+            "range": "stddev: 3.6270179470473804e-8",
+            "extra": "mean: 120.50296253484389 nsec\nrounds: 102041"
           }
         ]
       }
