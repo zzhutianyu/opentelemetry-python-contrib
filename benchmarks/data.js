@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634053660081,
+  "lastUpdate": 1634055364881,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -5194,58 +5194,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "way@whoop.com",
-            "name": "Marcus Way",
-            "username": "marcusway"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "a89d7a60bbcf407c55794b44946b809e52eb92b6",
-          "message": "Docs typo fix (#479)",
-          "timestamp": "2021-04-29T08:25:48-07:00",
-          "tree_id": "9313b158a98dd33319c2d8a820ba637570e091de",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/a89d7a60bbcf407c55794b44946b809e52eb92b6"
-        },
-        "date": 1619709995118,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 966805.2615843732,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000016471638162584722",
-            "extra": "mean: 1.034334461896937 usec\nrounds: 53764"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1252332.3099346037,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000017971015118601958",
-            "extra": "mean: 798.5101015657893 nsec\nrounds: 147059"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 91545.77974773069,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00000784991262606507",
-            "extra": "mean: 10.923496449051642 usec\nrounds: 141"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 363827.0934222866,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000007541023530073719",
-            "extra": "mean: 2.748558362142977 usec\nrounds: 68966"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "owais@users.noreply.github.com",
             "name": "Owais Lone",
             "username": "owais"
@@ -10374,6 +10322,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000003173499241001388",
             "extra": "mean: 799.4371826216325 nsec\nrounds: 104167"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andrew.matteson@appliedbiomath.com",
+            "name": "andrew-matteson",
+            "username": "andrew-matteson"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "36275f3cbf00c2021caa1d922bd98215c50b9af3",
+          "message": "Expand allowed versions for jinja2 instrumentation (#712)\n\n* Expand allowed versions\r\n\r\nThe Jinja2 API hasn't changed the functions that have been wrapped in at least 8 years.\r\nThe version supported should be much more broad.\r\n\r\n* don't include 4+\r\n\r\n* Update changelog\r\n\r\n* Fix test that depends on lru_cache now\r\n\r\n* tox -e generate\r\n\r\n* Make test setup backwards compatible\r\n\r\n* Update for code review feedback\r\n\r\n* Disable linting check\r\n\r\n* Fix black formatting issue\r\n\r\n* Update readme from tox -e generate\r\n\r\n* Update core repo sha\r\n\r\nCo-authored-by: alrex <aboten@lightstep.com>\r\nCo-authored-by: Leighton Chen <lechen@microsoft.com>\r\nCo-authored-by: Owais Lone <owais@users.noreply.github.com>",
+          "timestamp": "2021-10-12T16:15:16Z",
+          "tree_id": "6053c99473c6424a0e2e412aed36dfadada3ce7d",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/36275f3cbf00c2021caa1d922bd98215c50b9af3"
+        },
+        "date": 1634055361197,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1170182.0763171155,
+            "unit": "iter/sec",
+            "range": "stddev: 1.7594386315031366e-7",
+            "extra": "mean: 854.5678661796588 nsec\nrounds: 70418"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1488748.8755128728,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2969195228791892e-7",
+            "extra": "mean: 671.70495739619 nsec\nrounds: 142837"
           }
         ]
       }
