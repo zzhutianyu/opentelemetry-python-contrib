@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634235052412,
+  "lastUpdate": 1634243787345,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -10140,58 +10140,6 @@ window.BENCHMARK_DATA = {
             "username": "web-flow"
           },
           "distinct": true,
-          "id": "c56878ebf14fb852a44bc92b7a66d8b024008664",
-          "message": "fix build script issue (#497)",
-          "timestamp": "2021-05-12T08:58:47-07:00",
-          "tree_id": "2cde1fa7013ab73b03de43defe58227f4d8b3613",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/c56878ebf14fb852a44bc92b7a66d8b024008664"
-        },
-        "date": 1620835387754,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 911579.1217867109,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00000241442820483479",
-            "extra": "mean: 1.0969974806355618 usec\nrounds: 87720"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1205625.4552029574,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000037669887600293764",
-            "extra": "mean: 829.4449952797804 nsec\nrounds: 133334"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 58862.00130675789,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000007214518772845207",
-            "extra": "mean: 16.988888889260227 usec\nrounds: 18"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 174743.40805389083,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000011621665377860678",
-            "extra": "mean: 5.722676529758423 usec\nrounds: 50762"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
-            "email": "aboten@lightstep.com",
-            "name": "alrex",
-            "username": "codeboten"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
           "id": "639f257f71b459c846cf482e05df1ae46679ba87",
           "message": "[chore] bump 1.3.0.dev0 & 0.22.dev0 versions (#494)",
           "timestamp": "2021-05-12T11:54:18-07:00",
@@ -15184,6 +15132,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.196110296323259e-8",
             "extra": "mean: 631.2069782647385 nsec\nrounds: 138889"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7cf3cb42cf42c3cb9781ed219a8edff0f57302e4",
+          "message": "Add instrumentation and distro packages (#738)\n\nNow that SDK does not depend on opentelemetry-instrumentation\r\nanymore and opentelemetry-instrumentation has actual build time\r\ndependencies on the contrib repo, it makes maintanence a lot\r\neasier if we move opentelemetry-instrumentation to contrib repo.\r\nopentelemetry-distro depends on opentelemetry-instrumentation\r\nand is being moved as well. Neither of the two packages are\r\nreally part of \"core\" Otel python anyway.",
+          "timestamp": "2021-10-14T20:35:28Z",
+          "tree_id": "affb41ed92151e4aabd1e492fa4f1ece9ce252ad",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/7cf3cb42cf42c3cb9781ed219a8edff0f57302e4"
+        },
+        "date": 1634243784114,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1166903.2740790902,
+            "unit": "iter/sec",
+            "range": "stddev: 1.305378369952023e-7",
+            "extra": "mean: 856.9690583730611 nsec\nrounds: 74075"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1670684.3208256173,
+            "unit": "iter/sec",
+            "range": "stddev: 8.981695992174195e-8",
+            "extra": "mean: 598.5571226919882 nsec\nrounds: 151516"
           }
         ]
       }
