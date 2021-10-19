@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634659005518,
+  "lastUpdate": 1634659007655,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -4872,58 +4872,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "owais@users.noreply.github.com",
-            "name": "Owais Lone",
-            "username": "owais"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "5d1f3201afa8b7be111b22714cacfec36fe8f96b",
-          "message": "Simplify bootstrap and generate code (#514)\n\n- We now automatically generate bootstrap_gen.py file from the list of instrumentations present in the source tree.\r\n- Bootstrap command now uses consumes this auto-generated list instead of keeping it's own local copy.\r\n- We no longer uninstall packages before installing them as instrumentation package no longer specify libraries as dependencies so the edge cases are no longer there.\r\n- We no longer try to install an incompatible version or force upgrade/downgrade an installed version. This used to leave systems in broken states which should happen no more.",
-          "timestamp": "2021-06-01T09:19:09-07:00",
-          "tree_id": "c7cebfae8f4fcaa11930aab1ede52dceb8184542",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/5d1f3201afa8b7be111b22714cacfec36fe8f96b"
-        },
-        "date": 1622564665569,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1400651.8307022457,
-            "unit": "iter/sec",
-            "range": "stddev: 9.961131209281566e-8",
-            "extra": "mean: 713.9533023696754 nsec\nrounds: 58140"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 2715672.244005685,
-            "unit": "iter/sec",
-            "range": "stddev: 1.8359747611942304e-8",
-            "extra": "mean: 368.2329493948035 nsec\nrounds: 128189"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 194222.93783797522,
-            "unit": "iter/sec",
-            "range": "stddev: 4.133604592290203e-7",
-            "extra": "mean: 5.1487224481910605 usec\nrounds: 21142"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 493531.215871109,
-            "unit": "iter/sec",
-            "range": "stddev: 8.542710357279586e-7",
-            "extra": "mean: 2.0262142856251684 usec\nrounds: 42"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "46392822+NickSulistio@users.noreply.github.com",
             "name": "Nick",
             "username": "NickSulistio"
@@ -9744,6 +9692,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.6614676676720638e-7",
             "extra": "mean: 686.1850088930539 nsec\nrounds: 142858"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "aboten@lightstep.com",
+            "name": "alrex",
+            "username": "codeboten"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "22b069baaec15b21bc1879874d1a244210bc6e1b",
+          "message": "default value is invalid, was renamed (#755)\n\n* default value is invalid, was renamed\r\n\r\n* Update CHANGELOG.md\r\n\r\nCo-authored-by: Owais Lone <owais@users.noreply.github.com>",
+          "timestamp": "2021-10-19T15:55:41Z",
+          "tree_id": "933a31ce9b285ca273bd42e4afee073610beea15",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/22b069baaec15b21bc1879874d1a244210bc6e1b"
+        },
+        "date": 1634659003062,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 986626.8385071162,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015926333185799058",
+            "extra": "mean: 1.0135544270345604 usec\nrounds: 27174"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1187750.5246199712,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000049822804398275804",
+            "extra": "mean: 841.9276432817883 nsec\nrounds: 112360"
           }
         ]
       }
