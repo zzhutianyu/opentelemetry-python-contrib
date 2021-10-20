@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1634677582557,
+  "lastUpdate": 1634762459770,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "facedelajunk@gmail.com",
-            "name": "Joshua",
-            "username": "jomasti"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "a3ecbc1f410ebdad840424d31c37b61686b8def6",
-          "message": "Add SQLAlchemy multithreading test (#468)",
-          "timestamp": "2021-06-03T08:33:06-07:00",
-          "tree_id": "32574bf740e0001bd1c19571f1571305db08bb01",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/a3ecbc1f410ebdad840424d31c37b61686b8def6"
-        },
-        "date": 1622734431095,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1407466.474188355,
-            "unit": "iter/sec",
-            "range": "stddev: 4.293423041454361e-7",
-            "extra": "mean: 710.4964973156259 nsec\nrounds: 55243"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1859093.1105241356,
-            "unit": "iter/sec",
-            "range": "stddev: 4.6768737000357783e-7",
-            "extra": "mean: 537.8966735657846 nsec\nrounds: 169492"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 187463.15188754562,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000003176746897372191",
-            "extra": "mean: 5.334381663442182 usec\nrounds: 16339"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 423243.1003187608,
-            "unit": "iter/sec",
-            "range": "stddev: 9.180041926261603e-7",
-            "extra": "mean: 2.362708332981356 usec\nrounds: 24"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -4808,6 +4756,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000060253158554592004",
             "extra": "mean: 713.8201453561943 nsec\nrounds: 178572"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3049b4bfc5e2b64679f27543c1bd9d220047626e",
+          "message": "Added asgiref depedency to opentelemetry-instrumentation-asgi (#765)\n\nopentelemetry-instrumentaiton-asgi does not contain an instrumentor for\r\nasgiref. Instead, it implements an ASGI middleware that other\r\ninstrumentors import and use. As such, other instrumentors can take a\r\ndependency on this package without asgiref being installed locally. This\r\ncommit adds `asgiref` as a dependency to the\r\nopentelemetry-instrumentation-asgi package so the middleware can\r\nfunction properly when used by another instrumentation.",
+          "timestamp": "2021-10-21T02:10:03+05:30",
+          "tree_id": "a1874caa63dd700dd69aef59672a53890de03f01",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3049b4bfc5e2b64679f27543c1bd9d220047626e"
+        },
+        "date": 1634762455797,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1055720.7821423542,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000028708523750908913",
+            "extra": "mean: 947.220152255333 nsec\nrounds: 30865"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1555659.318940651,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010981425014512956",
+            "extra": "mean: 642.8142639102787 nsec\nrounds: 188644"
           }
         ]
       }
