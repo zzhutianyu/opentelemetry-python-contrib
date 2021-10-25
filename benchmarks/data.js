@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635175584658,
+  "lastUpdate": 1635175591434,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -22140,58 +22140,6 @@ window.BENCHMARK_DATA = {
             "username": "web-flow"
           },
           "distinct": true,
-          "id": "b2dd4b8205deb09ea2d0608dad37cff8ce211495",
-          "message": "Fix pyodbc cursor error in SQLA instrumentation (#469)",
-          "timestamp": "2021-06-07T09:11:37-07:00",
-          "tree_id": "ebf51cb4a7557aed53bc88fec0a45e68bd028f3f",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b2dd4b8205deb09ea2d0608dad37cff8ce211495"
-        },
-        "date": 1623082339463,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1474682.5476659904,
-            "unit": "iter/sec",
-            "range": "stddev: 2.2364619673437684e-7",
-            "extra": "mean: 678.112046272413 nsec\nrounds: 107527"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 2122381.3338188087,
-            "unit": "iter/sec",
-            "range": "stddev: 1.0709887475728366e-7",
-            "extra": "mean: 471.16886304342694 nsec\nrounds: 188644"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 213934.61628515553,
-            "unit": "iter/sec",
-            "range": "stddev: 3.8175811890873475e-7",
-            "extra": "mean: 4.674325349325844 usec\nrounds: 20040"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 496350.0114416664,
-            "unit": "iter/sec",
-            "range": "stddev: 9.914728246988054e-7",
-            "extra": "mean: 2.014707317313168 usec\nrounds: 41"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
-            "email": "facedelajunk@gmail.com",
-            "name": "Joshua",
-            "username": "jomasti"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
           "id": "9695bcfed37d7ce99a40d5ce4b23668d25a5192f",
           "message": "Add support for HTTPX instrumentation (#461)",
           "timestamp": "2021-06-08T08:28:03-07:00",
@@ -26876,6 +26824,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000013462142246643284",
             "extra": "mean: 636.2705270726198 nsec\nrounds: 175439"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "adamantike@users.noreply.github.com",
+            "name": "Michael Manganiello",
+            "username": "adamantike"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3a784393072b608a5834a7d43595463991d3fc48",
+          "message": "`falcon`: Drop support for Python 3.4 (#774)\n\nRemove unwanted support for Python versions <3.6.\r\nThis integration mistakenly lists Python 3.4 support, because it was\r\nmerged in\r\nhttps://github.com/open-telemetry/opentelemetry-python/pull/1039,\r\nafter the merge of\r\nhttps://github.com/open-telemetry/opentelemetry-python/pull/1099, so the\r\nlatter didn't consider `falcon`.\r\n\r\nPython 3.4 is broken nevertheless, as this integration already includes\r\nf-strings and other `opentelemetry` dependencies, which require Python 3.6.\r\n\r\nFixes #772.",
+          "timestamp": "2021-10-25T20:55:09+05:30",
+          "tree_id": "7b8eb87160fd03ad474705ce739200acced6d654",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3a784393072b608a5834a7d43595463991d3fc48"
+        },
+        "date": 1635175584878,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1304787.0020126684,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3313989673426915e-7",
+            "extra": "mean: 766.4086157031559 nsec\nrounds: 75188"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1928368.6711622973,
+            "unit": "iter/sec",
+            "range": "stddev: 1.268206613644371e-7",
+            "extra": "mean: 518.5730379021684 nsec\nrounds: 47845"
           }
         ]
       }
