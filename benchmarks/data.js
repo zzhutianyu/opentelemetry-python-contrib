@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635178556193,
+  "lastUpdate": 1635178560581,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -17306,58 +17306,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "facedelajunk@gmail.com",
-            "name": "Joshua",
-            "username": "jomasti"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "9695bcfed37d7ce99a40d5ce4b23668d25a5192f",
-          "message": "Add support for HTTPX instrumentation (#461)",
-          "timestamp": "2021-06-08T08:28:03-07:00",
-          "tree_id": "8bf51af278358a0a81f54064440ed869881cd76c",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9695bcfed37d7ce99a40d5ce4b23668d25a5192f"
-        },
-        "date": 1623166727197,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 3742768.738129944,
-            "unit": "iter/sec",
-            "range": "stddev: 4.910404674504233e-8",
-            "extra": "mean: 267.18188324392605 nsec\nrounds: 42379"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 7358097.608513592,
-            "unit": "iter/sec",
-            "range": "stddev: 3.682627887416146e-8",
-            "extra": "mean: 135.9046934689122 nsec\nrounds: 86957"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 1194136.1034625345,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000015977033736549562",
-            "extra": "mean: 837.4254803119568 nsec\nrounds: 140846"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 2270739.8655132568,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000012694406196037502",
-            "extra": "mean: 440.3850987897933 nsec\nrounds: 196079"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "kamalhusain@yahoo.com",
             "name": "kamalhussain",
             "username": "kamalhussain"
@@ -22038,6 +21986,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.825613863222793e-8",
             "extra": "mean: 133.8909390258552 nsec\nrounds: 91744"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "adamantike@users.noreply.github.com",
+            "name": "Michael Manganiello",
+            "username": "adamantike"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4b9b6dc18e501287b22cd52e66fd7abfbda81356",
+          "message": "django: Fix carrier usage on ASGI requests (#767)\n\n* django: Fix carrier usage on ASGI requests\r\n\r\nFor ASGI requests, we must use `request.scope` instead of\r\n`request.META`. This is because `ASGIGetter` retrieves the `headers` key\r\nfrom the carrier [0], which is only present in `request.scope`.\r\n\r\n[0] https://github.com/open-telemetry/opentelemetry-python-contrib/blob/main/instrumentation/opentelemetry-instrumentation-asgi/src/opentelemetry/instrumentation/asgi/__init__.py#L133\r\n\r\n* Add unit tests",
+          "timestamp": "2021-10-25T16:14:47Z",
+          "tree_id": "b211b82a2b592a1f2443538ca23ffddebb2ae98f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/4b9b6dc18e501287b22cd52e66fd7abfbda81356"
+        },
+        "date": 1635178555408,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3820991.83862016,
+            "unit": "iter/sec",
+            "range": "stddev: 4.377316307855459e-8",
+            "extra": "mean: 261.7121528219118 nsec\nrounds: 45661"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7418935.199814037,
+            "unit": "iter/sec",
+            "range": "stddev: 4.5191185194431106e-8",
+            "extra": "mean: 134.7902324346244 nsec\nrounds: 86949"
           }
         ]
       }
