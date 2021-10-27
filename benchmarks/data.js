@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635284729551,
+  "lastUpdate": 1635375243904,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "cristianvargasvalencia@gmail.com",
-            "name": "Cristian Vargas",
-            "username": "cdvv7788"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "7cae4d3001c13ec348a2be9efe7b50a717860b3d",
-          "message": "Enable passing explicit urls to exclude in instrumentation in FastAPI (#486)",
-          "timestamp": "2021-06-14T17:17:39-07:00",
-          "tree_id": "7ef4e1531243082a080234d43bce2de4d9970bc1",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/7cae4d3001c13ec348a2be9efe7b50a717860b3d"
-        },
-        "date": 1623716299604,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1200109.2008791368,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000013283591070535923",
-            "extra": "mean: 833.2575062898048 nsec\nrounds: 76336"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1658984.8711670518,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000001479892404078864",
-            "extra": "mean: 602.7782515560414 nsec\nrounds: 192308"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 169470.13627054007,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000003219853625454516",
-            "extra": "mean: 5.900744650394404 usec\nrounds: 18833"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 462776.65977846296,
-            "unit": "iter/sec",
-            "range": "stddev: 8.066423838578495e-7",
-            "extra": "mean: 2.1608695660639254 usec\nrounds: 23"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -4668,6 +4616,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.564610883207243e-8",
             "extra": "mean: 513.1800720657974 nsec\nrounds: 188680"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "matt.r.oberle@gmail.com",
+            "name": "Matt Oberle",
+            "username": "mattoberle"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6912c3963d7f7390bd25727093ce21491f9951fe",
+          "message": "Add setuptools instrumentation install requirement (#781)\n\nThe `setuptools` package is not part of the stdlib, but often available\r\nin the system environment (it is a buildtime requirement).\r\n\r\n`pkg_resources` (a package provided by `setuptools`) is used as\r\na runtime requirement in `opentelemetry-instrumentation`. Explicitly\r\nlisting `setuptools` as a requirement protects instrumentation from\r\nbreaking with import errors in cases where `setuptools` is not available\r\nsystem-wide.\r\n\r\nFor example:\r\n\r\n* A multi-stage Docker build where the final image does not contain\r\nbuildtime requirements.\r\n* A build system that packages the runtime dependencies into a single\r\nbinary.\r\n\r\nThis commit pins `setuptools >= 16.0` because that is the first release\r\nthat included all 5 imports instrumentation currently relies on.\r\n\r\nCo-authored-by: Matt Oberle <mattoberle@users.noreply.github.com>",
+          "timestamp": "2021-10-28T04:23:10+05:30",
+          "tree_id": "0e3cf123bd7b6ebe39f84bc149b9f20d367ddc1e",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/6912c3963d7f7390bd25727093ce21491f9951fe"
+        },
+        "date": 1635375239222,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1120986.2529520893,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000037873589907646667",
+            "extra": "mean: 892.0715997778964 nsec\nrounds: 70922"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1620599.6804231966,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013513706010132868",
+            "extra": "mean: 617.0555332572102 nsec\nrounds: 181819"
           }
         ]
       }
