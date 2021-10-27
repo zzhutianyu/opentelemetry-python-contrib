@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635375255084,
+  "lastUpdate": 1635375256063,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26454,6 +26454,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.1697783598543256e-7",
             "extra": "mean: 523.577707996372 nsec\nrounds: 151516"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "matt.r.oberle@gmail.com",
+            "name": "Matt Oberle",
+            "username": "mattoberle"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6912c3963d7f7390bd25727093ce21491f9951fe",
+          "message": "Add setuptools instrumentation install requirement (#781)\n\nThe `setuptools` package is not part of the stdlib, but often available\r\nin the system environment (it is a buildtime requirement).\r\n\r\n`pkg_resources` (a package provided by `setuptools`) is used as\r\na runtime requirement in `opentelemetry-instrumentation`. Explicitly\r\nlisting `setuptools` as a requirement protects instrumentation from\r\nbreaking with import errors in cases where `setuptools` is not available\r\nsystem-wide.\r\n\r\nFor example:\r\n\r\n* A multi-stage Docker build where the final image does not contain\r\nbuildtime requirements.\r\n* A build system that packages the runtime dependencies into a single\r\nbinary.\r\n\r\nThis commit pins `setuptools >= 16.0` because that is the first release\r\nthat included all 5 imports instrumentation currently relies on.\r\n\r\nCo-authored-by: Matt Oberle <mattoberle@users.noreply.github.com>",
+          "timestamp": "2021-10-28T04:23:10+05:30",
+          "tree_id": "0e3cf123bd7b6ebe39f84bc149b9f20d367ddc1e",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/6912c3963d7f7390bd25727093ce21491f9951fe"
+        },
+        "date": 1635375252409,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1209384.1530524914,
+            "unit": "iter/sec",
+            "range": "stddev: 9.810180874765461e-8",
+            "extra": "mean: 826.8671269389426 nsec\nrounds: 76336"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1611872.741148502,
+            "unit": "iter/sec",
+            "range": "stddev: 1.0435926343334686e-7",
+            "extra": "mean: 620.3963715444889 nsec\nrounds: 172414"
           }
         ]
       }
