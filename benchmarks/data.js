@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635454413102,
+  "lastUpdate": 1635454418675,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26464,6 +26464,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.0435926343334686e-7",
             "extra": "mean: 620.3963715444889 nsec\nrounds: 172414"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "adamantike@users.noreply.github.com",
+            "name": "Michael Manganiello",
+            "username": "adamantike"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9dc3bbb8dce2fbfe5cbff906d0b0cf5819934484",
+          "message": "`django`: Fix instrumentation and tests for all Django major versions (#780)",
+          "timestamp": "2021-10-28T13:52:36-07:00",
+          "tree_id": "2210933bb97c0fe26a501cc4e5332679da833c5a",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9dc3bbb8dce2fbfe5cbff906d0b0cf5819934484"
+        },
+        "date": 1635454414518,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1107969.1930554525,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013952620167484973",
+            "extra": "mean: 902.5521704645006 nsec\nrounds: 62890"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1631184.6746768553,
+            "unit": "iter/sec",
+            "range": "stddev: 6.426351118182509e-7",
+            "extra": "mean: 613.0513702858963 nsec\nrounds: 163908"
           }
         ]
       }
