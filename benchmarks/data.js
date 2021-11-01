@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635454490694,
+  "lastUpdate": 1635777236514,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
-      {
-        "commit": {
-          "author": {
-            "email": "ryansiu@uw.edu",
-            "name": "Ryan, Siu Long Wa",
-            "username": "RyanSiu1995"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "63e7561931cd2d5e8edca9281c5156b9852eb348",
-          "message": "Update the psycopg2 dependency (#543)",
-          "timestamp": "2021-06-22T07:47:34-07:00",
-          "tree_id": "5d062e2d484808af1b009f4f094f1fc438fd84cb",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/63e7561931cd2d5e8edca9281c5156b9852eb348"
-        },
-        "date": 1624373298903,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1392371.8219564075,
-            "unit": "iter/sec",
-            "range": "stddev: 1.7540447337870737e-7",
-            "extra": "mean: 718.1989639771007 nsec\nrounds: 107527"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1957623.876138983,
-            "unit": "iter/sec",
-            "range": "stddev: 9.930923715824885e-8",
-            "extra": "mean: 510.82335692201383 nsec\nrounds: 196079"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 193905.1604289623,
-            "unit": "iter/sec",
-            "range": "stddev: 3.539539185864158e-7",
-            "extra": "mean: 5.157160324087161 usec\nrounds: 18762"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 466392.31793066225,
-            "unit": "iter/sec",
-            "range": "stddev: 8.169385484696726e-7",
-            "extra": "mean: 2.1441176485000946 usec\nrounds: 34"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -4640,6 +4588,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 6.578632820087269e-7",
             "extra": "mean: 630.122843550828 nsec\nrounds: 46083"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nathanielruiz98@gmail.com",
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "671aea32f9bbf53ace776c17ef2a80424d730fbb",
+          "message": "Add instrumentation for AWS Lambda Service - Implementation (Part 2/2) (#777)\n\n* Add instrumentation for AWS Lambda Service - Implementation\r\n\r\n* Lambda is CONSUMER SQS trace if 'Records' key in Lambda event\r\n\r\n* More robust check of SQS by indexing and catching\r\n\r\n* Explicitly catch errors we expect when determinig if SQS triggered Lambda",
+          "timestamp": "2021-11-01T20:02:58+05:30",
+          "tree_id": "9f58040c99ccad4b31522fadce959b1f2b11dba4",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/671aea32f9bbf53ace776c17ef2a80424d730fbb"
+        },
+        "date": 1635777232957,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1350547.7218280146,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013281483274538419",
+            "extra": "mean: 740.4403293846324 nsec\nrounds: 50762"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1781881.070595859,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001285031550880436",
+            "extra": "mean: 561.2046822325808 nsec\nrounds: 169492"
           }
         ]
       }
