@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635777248197,
+  "lastUpdate": 1635777250144,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26404,6 +26404,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 6.426351118182509e-7",
             "extra": "mean: 613.0513702858963 nsec\nrounds: 163908"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nathanielruiz98@gmail.com",
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "671aea32f9bbf53ace776c17ef2a80424d730fbb",
+          "message": "Add instrumentation for AWS Lambda Service - Implementation (Part 2/2) (#777)\n\n* Add instrumentation for AWS Lambda Service - Implementation\r\n\r\n* Lambda is CONSUMER SQS trace if 'Records' key in Lambda event\r\n\r\n* More robust check of SQS by indexing and catching\r\n\r\n* Explicitly catch errors we expect when determinig if SQS triggered Lambda",
+          "timestamp": "2021-11-01T20:02:58+05:30",
+          "tree_id": "9f58040c99ccad4b31522fadce959b1f2b11dba4",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/671aea32f9bbf53ace776c17ef2a80424d730fbb"
+        },
+        "date": 1635777244146,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1255816.5760931706,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000039029818396366634",
+            "extra": "mean: 796.2946333380845 nsec\nrounds: 80646"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 2510045.4460340026,
+            "unit": "iter/sec",
+            "range": "stddev: 4.704055598862149e-7",
+            "extra": "mean: 398.39916109096794 nsec\nrounds: 129871"
           }
         ]
       }
