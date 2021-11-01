@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635777244072,
+  "lastUpdate": 1635777248197,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -4634,58 +4634,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "ryansiu@uw.edu",
-            "name": "Ryan, Siu Long Wa",
-            "username": "RyanSiu1995"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "63e7561931cd2d5e8edca9281c5156b9852eb348",
-          "message": "Update the psycopg2 dependency (#543)",
-          "timestamp": "2021-06-22T07:47:34-07:00",
-          "tree_id": "5d062e2d484808af1b009f4f094f1fc438fd84cb",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/63e7561931cd2d5e8edca9281c5156b9852eb348"
-        },
-        "date": 1624373305799,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 960853.3113373328,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000020134216279409035",
-            "extra": "mean: 1.0407415868798768 usec\nrounds: 60976"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 2093982.0021805852,
-            "unit": "iter/sec",
-            "range": "stddev: 4.0848806729120485e-7",
-            "extra": "mean: 477.5590234099456 nsec\nrounds: 100001"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 157526.4227720446,
-            "unit": "iter/sec",
-            "range": "stddev: 0.000002937527304012673",
-            "extra": "mean: 6.348141361954833 usec\nrounds: 7548"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 376398.7792289394,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000020220369998752463",
-            "extra": "mean: 2.656756756885664 usec\nrounds: 37"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "nathanielruiz98@gmail.com",
             "name": "(Eliseo) Nathaniel Ruiz Nowell",
             "username": "NathanielRN"
@@ -9268,6 +9216,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.1147530813035278e-7",
             "extra": "mean: 684.6325301468679 nsec\nrounds: 142858"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nathanielruiz98@gmail.com",
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "671aea32f9bbf53ace776c17ef2a80424d730fbb",
+          "message": "Add instrumentation for AWS Lambda Service - Implementation (Part 2/2) (#777)\n\n* Add instrumentation for AWS Lambda Service - Implementation\r\n\r\n* Lambda is CONSUMER SQS trace if 'Records' key in Lambda event\r\n\r\n* More robust check of SQS by indexing and catching\r\n\r\n* Explicitly catch errors we expect when determinig if SQS triggered Lambda",
+          "timestamp": "2021-11-01T20:02:58+05:30",
+          "tree_id": "9f58040c99ccad4b31522fadce959b1f2b11dba4",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/671aea32f9bbf53ace776c17ef2a80424d730fbb"
+        },
+        "date": 1635777243719,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 917378.6400950119,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002430253900898451",
+            "extra": "mean: 1.0900624412798963 usec\nrounds: 42552"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1127351.0702738469,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000027038691176163797",
+            "extra": "mean: 887.0351271827757 nsec\nrounds: 129871"
           }
         ]
       }
