@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635777309704,
+  "lastUpdate": 1636199398950,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26414,6 +26414,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 4.704055598862149e-7",
             "extra": "mean: 398.39916109096794 nsec\nrounds: 129871"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0c083ff6ea8bcda09533642aad4fb0f578f9c476",
+          "message": "Support PyMySQL 1.x series (#792)\n\nFixes #791",
+          "timestamp": "2021-11-06T17:18:50+05:30",
+          "tree_id": "2872612a9b3ceca0b0906d6b5e034fa05ad8726f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/0c083ff6ea8bcda09533642aad4fb0f578f9c476"
+        },
+        "date": 1636199394241,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1093735.7183460016,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014124881104566558",
+            "extra": "mean: 914.2976527384942 nsec\nrounds: 81968"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1704935.2921175128,
+            "unit": "iter/sec",
+            "range": "stddev: 6.494608395820796e-7",
+            "extra": "mean: 586.5325239164999 nsec\nrounds: 87720"
           }
         ]
       }
