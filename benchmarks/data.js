@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636470948788,
+  "lastUpdate": 1636470952099,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26308,6 +26308,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000013141446470411846",
             "extra": "mean: 585.8062645776431 nsec\nrounds: 94340"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "89069190+ItayGibel-helios@users.noreply.github.com",
+            "name": "ItayGibel-helios",
+            "username": "ItayGibel-helios"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "760673fc450198122397c9ed22cf646ef00f8ab2",
+          "message": "pymongo instrumentation hooks (#793)\n\n* pymongo instrumentation hooks\r\n\r\n* update PR number",
+          "timestamp": "2021-11-09T09:14:55-06:00",
+          "tree_id": "01570622d317dfffff77cc5e3a00717249d89346",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/760673fc450198122397c9ed22cf646ef00f8ab2"
+        },
+        "date": 1636470947104,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1124755.6170934178,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000021402017977222996",
+            "extra": "mean: 889.082023510307 nsec\nrounds: 86207"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1612190.9248397516,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000012854194920633602",
+            "extra": "mean: 620.2739294661382 nsec\nrounds: 166667"
           }
         ]
       }
