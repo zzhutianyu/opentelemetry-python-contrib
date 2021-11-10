@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636584291734,
+  "lastUpdate": 1636584293091,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26194,6 +26194,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000004229560091145606",
             "extra": "mean: 571.5629095220002 nsec\nrounds: 96154"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "adamantike@users.noreply.github.com",
+            "name": "Michael Manganiello",
+            "username": "adamantike"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d4ad8f57be9387aa030dc3e1ea5797173c19afca",
+          "message": "Add support for generic OTEL_PYTHON_EXCLUDED_URLS variable (#790)\n\n* Add support for generic OTEL_PYTHON_EXCLUDED_URLS variable\r\n\r\nUse `OTEL_PYTHON_EXCLUDED_URLS` environment variable as a fallback of\r\n`OTEL_PYTHON_{instrumentation}_EXCLUDED_URLS`.\r\n\r\n* Only use generic variable when instrumentation-specific is not set\r\n\r\n* Change wording on docs\r\n\r\nCo-authored-by: Leighton Chen <lechen@microsoft.com>",
+          "timestamp": "2021-11-10T22:44:02Z",
+          "tree_id": "0496382fb46d93cb68f6a9dcf31844328ba26786",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/d4ad8f57be9387aa030dc3e1ea5797173c19afca"
+        },
+        "date": 1636584287904,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1381174.5494426386,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013993672873680542",
+            "extra": "mean: 724.0214500068378 nsec\nrounds: 75758"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1769003.5145014683,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000029724024743641424",
+            "extra": "mean: 565.290001858371 nsec\nrounds: 169492"
           }
         ]
       }
