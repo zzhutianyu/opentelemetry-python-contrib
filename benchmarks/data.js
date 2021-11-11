@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636631382983,
+  "lastUpdate": 1636634198080,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -4508,58 +4508,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "aboten@lightstep.com",
-            "name": "alrex",
-            "username": "codeboten"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "753e22896a11cadf28c4f64acdfcfd73350d7d90",
-          "message": "updating dependency for api/sdk to major version  (#567)\n\n\r\nCo-authored-by: Leighton Chen <lechen@microsoft.com>",
-          "timestamp": "2021-07-09T10:17:18-07:00",
-          "tree_id": "9da8897bcd48535fba7ca05781985b74b62a816a",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/753e22896a11cadf28c4f64acdfcfd73350d7d90"
-        },
-        "date": 1625851158570,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1113408.337507727,
-            "unit": "iter/sec",
-            "range": "stddev: 1.1742271777988635e-7",
-            "extra": "mean: 898.1430857958345 nsec\nrounds: 66226"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1466576.5514048873,
-            "unit": "iter/sec",
-            "range": "stddev: 1.248709165498514e-7",
-            "extra": "mean: 681.8600768177176 nsec\nrounds: 196079"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 172449.85742319006,
-            "unit": "iter/sec",
-            "range": "stddev: 3.267330539190169e-7",
-            "extra": "mean: 5.7987870500003424 usec\nrounds: 20000"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 423728.8136595631,
-            "unit": "iter/sec",
-            "range": "stddev: 8.746427841036442e-7",
-            "extra": "mean: 2.3599999994416976 usec\nrounds: 25"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "sengjea@users.noreply.github.com",
             "name": "Seng Jea Lee",
             "username": "sengjea"
@@ -9002,6 +8950,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 4.0789479296136355e-7",
             "extra": "mean: 805.7535695810832 nsec\nrounds: 156251"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "matt.r.oberle@gmail.com",
+            "name": "Matt Oberle",
+            "username": "mattoberle"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "10d8e26a7832a1af19581af38ff07a1aea727e9d",
+          "message": "Fix sqlalchemy for postgres Unix sockets (#761)\n\n* Fix sqlalchemy for postgres unix sockets\r\n\r\nThe following bit of replaced code contained a type inconsistency:\r\n\r\n```py\r\nattrs[SpanAttributes.NET_PEER_PORT] = int(data.get(\"port\"))\r\n```\r\n\r\n`data.get` returns `Optional[str]` but `int(None)` throws a `TypeError`.\r\n\r\nWhen using postgresql via unix socket `dsn` looks something like this:\r\n\r\n```py\r\n'user=postgres host=/tmp/socket dbname=postgres'\r\n```\r\n\r\nThe `parse_dsn` function returns this:\r\n\r\n```py\r\n{'user': 'postgres', 'dbname': 'postgres', 'host': '/tmp/socket'}\r\n```\r\n\r\n* Update CHANGELOG\r\n\r\n* Conditionally set net.transport for psql tcp/unix\r\n\r\n* Use .value properties of enums\r\n\r\n* Improve postgresql attribute detection from cursor\r\n\r\n* Fix formatting\r\n\r\nCo-authored-by: Matt Oberle <mattoberle@users.noreply.github.com>\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2021-11-11T12:35:55Z",
+          "tree_id": "2c83fb8c366211f45d71ee5393a43ad3eccfee07",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/10d8e26a7832a1af19581af38ff07a1aea727e9d"
+        },
+        "date": 1636634194320,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1164808.0532454902,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5140645389865524e-7",
+            "extra": "mean: 858.5105479084837 nsec\nrounds: 69445"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1464837.4321897982,
+            "unit": "iter/sec",
+            "range": "stddev: 1.46494644122106e-7",
+            "extra": "mean: 682.669610992321 nsec\nrounds: 181819"
           }
         ]
       }
