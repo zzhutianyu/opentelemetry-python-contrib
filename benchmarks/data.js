@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636657930359,
+  "lastUpdate": 1636657935744,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -4438,58 +4438,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "mario.jonke@dynatrace.com",
-            "name": "Mario Jonke",
-            "username": "mariojonke"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "2ccf12055e81ba3c7bcd2043200ea41db43ae20a",
-          "message": "Fix RequestsInstrumentor for custom transport adapters (#562)\n\n* Fix RequestsInstrumentor for custom transport adapters\r\nremove dead/leftover code from an early metrics implementation which\r\ntried to access the raw.version attribute on the response object.\r\nThe 'version' attribute might not be present in every case, especially\r\nwhen custom transport adapters are used.",
-          "timestamp": "2021-07-14T10:51:09-07:00",
-          "tree_id": "b7478c58b3dc99e89bc715923b00849a70b8c59c",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/2ccf12055e81ba3c7bcd2043200ea41db43ae20a"
-        },
-        "date": 1626285111694,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1193579.364658367,
-            "unit": "iter/sec",
-            "range": "stddev: 1.2472226917852823e-7",
-            "extra": "mean: 837.8160930138279 nsec\nrounds: 86957"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1522790.4894108162,
-            "unit": "iter/sec",
-            "range": "stddev: 1.1864116066214125e-7",
-            "extra": "mean: 656.689155175188 nsec\nrounds: 172414"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 163978.35736785884,
-            "unit": "iter/sec",
-            "range": "stddev: 9.42069947321944e-7",
-            "extra": "mean: 6.09836576028544 usec\nrounds: 15409"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 426540.2843310916,
-            "unit": "iter/sec",
-            "range": "stddev: 8.408989897024347e-7",
-            "extra": "mean: 2.344444444604379 usec\nrounds: 36"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "srikanth.chekuri92@gmail.com",
             "name": "Srikanth Chekuri",
             "username": "lonewolf3739"
@@ -8876,6 +8824,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.5932096546205367e-7",
             "extra": "mean: 693.7828921353815 nsec\nrounds: 138889"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7cf29b400057ab749a280d940451b6d4f458b2ec",
+          "message": "Rename opentelemetry-test to opentelemetry-test-utils (#807)\n\n* updating changelogs and version to 1.7.0-0.26b0\r\n\r\n* Rename opentelemetry-test to opentelemetry-test-utils",
+          "timestamp": "2021-11-11T19:11:12Z",
+          "tree_id": "038f7a7d01297379f7315f667e18425ee0770013",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/7cf29b400057ab749a280d940451b6d4f458b2ec"
+        },
+        "date": 1636657931002,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 963173.4831881373,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6202129099022645e-7",
+            "extra": "mean: 1.0382345625732612 usec\nrounds: 72454"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1186007.779077242,
+            "unit": "iter/sec",
+            "range": "stddev: 1.9638966372653906e-7",
+            "extra": "mean: 843.1647900134661 nsec\nrounds: 121937"
           }
         ]
       }
