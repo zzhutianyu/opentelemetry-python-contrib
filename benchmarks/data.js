@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636657935744,
+  "lastUpdate": 1636657943200,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25970,6 +25970,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.1204991367178735e-7",
             "extra": "mean: 502.38368036409025 nsec\nrounds: 93458"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7cf29b400057ab749a280d940451b6d4f458b2ec",
+          "message": "Rename opentelemetry-test to opentelemetry-test-utils (#807)\n\n* updating changelogs and version to 1.7.0-0.26b0\r\n\r\n* Rename opentelemetry-test to opentelemetry-test-utils",
+          "timestamp": "2021-11-11T19:11:12Z",
+          "tree_id": "038f7a7d01297379f7315f667e18425ee0770013",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/7cf29b400057ab749a280d940451b6d4f458b2ec"
+        },
+        "date": 1636657938841,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1340213.0938549663,
+            "unit": "iter/sec",
+            "range": "stddev: 1.308258937363881e-7",
+            "extra": "mean: 746.1500000150102 nsec\nrounds: 87720"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1897400.8736078884,
+            "unit": "iter/sec",
+            "range": "stddev: 1.233223449451853e-7",
+            "extra": "mean: 527.0367553370576 nsec\nrounds: 136987"
           }
         ]
       }
