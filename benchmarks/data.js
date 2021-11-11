@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636587839630,
+  "lastUpdate": 1636631365498,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26158,6 +26158,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 5.639035635953775e-7",
             "extra": "mean: 621.6955190217043 nsec\nrounds: 114930"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "lechen@microsoft.com",
+            "name": "Leighton Chen",
+            "username": "lzchen"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2dd9bd12eadd9465100dc4830cb9d6569232516a",
+          "message": "Pass in auto-instrumentation version to configurator (#783)\n\n* version\r\n\r\n* Update CHANGELOG.md\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2021-11-11T11:48:46Z",
+          "tree_id": "a4678d355895f05f87923ae287b470d62940352d",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/2dd9bd12eadd9465100dc4830cb9d6569232516a"
+        },
+        "date": 1636631361768,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1334734.0604479823,
+            "unit": "iter/sec",
+            "range": "stddev: 1.237438143120772e-7",
+            "extra": "mean: 749.2129178634776 nsec\nrounds: 92585"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1992007.411425688,
+            "unit": "iter/sec",
+            "range": "stddev: 1.380041324062861e-7",
+            "extra": "mean: 502.006164366776 nsec\nrounds: 151516"
           }
         ]
       }
