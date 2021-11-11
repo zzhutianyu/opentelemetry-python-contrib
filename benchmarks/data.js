@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636638645301,
+  "lastUpdate": 1636656961878,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26030,6 +26030,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.7286396424421252e-7",
             "extra": "mean: 533.9893846538242 nsec\nrounds: 95239"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e621d637e970c1073f0be291e3d9ee2907e967c7",
+          "message": "updating changelogs and version to 1.7.0-0.26b0 (#805)",
+          "timestamp": "2021-11-11T18:55:06Z",
+          "tree_id": "f043033a1f5a20632a784e6a4009a879f165e3ce",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/e621d637e970c1073f0be291e3d9ee2907e967c7"
+        },
+        "date": 1636656957751,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1305226.7375981691,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4628251032433133e-7",
+            "extra": "mean: 766.1504098821664 nsec\nrounds: 59524"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1990510.5183259028,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1204991367178735e-7",
+            "extra": "mean: 502.38368036409025 nsec\nrounds: 93458"
           }
         ]
       }
