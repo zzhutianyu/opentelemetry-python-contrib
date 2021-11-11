@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636660910464,
+  "lastUpdate": 1636660912374,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25938,6 +25938,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.233223449451853e-7",
             "extra": "mean: 527.0367553370576 nsec\nrounds: 136987"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a9507b3d1daf79b412b67fd97ddb4e2b7117ebcd",
+          "message": "updating changelogs and version to 1.7.1-0.26b1 (#809)",
+          "timestamp": "2021-11-12T01:30:47+05:30",
+          "tree_id": "aaaaa9e059843d8f8d075b1b7ea5ab2c078eef7f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/a9507b3d1daf79b412b67fd97ddb4e2b7117ebcd"
+        },
+        "date": 1636660905513,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1239862.727628573,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018760969596703838",
+            "extra": "mean: 806.5408998241708 nsec\nrounds: 80000"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1778761.533374501,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000131738310694659",
+            "extra": "mean: 562.1889057286353 nsec\nrounds: 169492"
           }
         ]
       }
