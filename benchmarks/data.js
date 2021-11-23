@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637686742585,
+  "lastUpdate": 1637686744673,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25842,6 +25842,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.5381375515248185e-7",
             "extra": "mean: 630.9905519949078 nsec\nrounds: 131562"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "morgan_mclean@hotmail.com",
+            "name": "Morgan McLean",
+            "username": "mtwo"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "444e0a13127304d3a04ccd44445b2e6caed3f770",
+          "message": "Remove direct Zoom link (#816)\n\nZoom links are randomized and in the calendar. Removed the existing link.",
+          "timestamp": "2021-11-23T22:28:08+05:30",
+          "tree_id": "47377dcce44664ef6d6a3220941a0cbf9b95af0f",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/444e0a13127304d3a04ccd44445b2e6caed3f770"
+        },
+        "date": 1637686738525,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1115895.4179390809,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5485537159347937e-7",
+            "extra": "mean: 896.1413264397794 nsec\nrounds: 104156"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1586718.550670074,
+            "unit": "iter/sec",
+            "range": "stddev: 1.883808662532203e-7",
+            "extra": "mean: 630.2314922691855 nsec\nrounds: 158731"
           }
         ]
       }
