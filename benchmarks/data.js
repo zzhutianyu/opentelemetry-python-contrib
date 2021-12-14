@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1639485478535,
+  "lastUpdate": 1639485481539,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -20600,58 +20600,6 @@ window.BENCHMARK_DATA = {
             "username": "web-flow"
           },
           "distinct": true,
-          "id": "278149553b57f5487025f14059cb55cd1218f684",
-          "message": "Remove opentelemetry-instrumentation (#595)\n\nFixes #592",
-          "timestamp": "2021-07-19T09:19:48-07:00",
-          "tree_id": "1a74ec30194603ea48f45768f5379b76def9c90f",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/278149553b57f5487025f14059cb55cd1218f684"
-        },
-        "date": 1626711959834,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 1082081.8834613895,
-            "unit": "iter/sec",
-            "range": "stddev: 4.151407963304426e-7",
-            "extra": "mean: 924.1444804538969 nsec\nrounds: 105253"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1655250.4174717362,
-            "unit": "iter/sec",
-            "range": "stddev: 3.886559777871843e-7",
-            "extra": "mean: 604.1381953115111 nsec\nrounds: 169492"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 182363.04956462572,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000014722204252053997",
-            "extra": "mean: 5.4835669966443525 usec\nrounds: 18083"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 397763.6842720441,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000010880348456349286",
-            "extra": "mean: 2.5140555549462027 usec\nrounds: 36"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
-            "email": "ocelotl@users.noreply.github.com",
-            "name": "Diego Hurtado",
-            "username": "ocelotl"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
           "id": "4d0f57bbc58a6aa07da7a04961846d2877c7feff",
           "message": "Release/1.4.0 0.23b0 (#597)",
           "timestamp": "2021-07-19T15:57:58-07:00",
@@ -24958,6 +24906,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000003420059707231164",
             "extra": "mean: 837.8740143699706 nsec\nrounds: 85478"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jwach@splunk.com",
+            "name": "Jakub Wach",
+            "username": "kubawach"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "07f81461df3e87da0495475d79eed415f3698634",
+          "message": "lambda instrumentation - support for flush timeout (#825)\n\n* lambda instrumentation - support for flush timeout\r\n\r\n* Update instrumentation/opentelemetry-instrumentation-aws-lambda/tests/test_aws_lambda_instrumentation_manual.py\r\n\r\nCo-authored-by: (Eliseo) Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>\r\n\r\n* Update instrumentation/opentelemetry-instrumentation-aws-lambda/tests/test_aws_lambda_instrumentation_manual.py\r\n\r\nCo-authored-by: (Eliseo) Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>\r\n\r\n* fixing lint\r\n\r\n* fixing django lint\r\n\r\nCo-authored-by: (Eliseo) Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>",
+          "timestamp": "2021-12-14T18:06:36+05:30",
+          "tree_id": "7e880302141d0f7cd4729af02fe2fbb55ca3a007",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/07f81461df3e87da0495475d79eed415f3698634"
+        },
+        "date": 1639485476076,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1126820.012681833,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000053326277950275935",
+            "extra": "mean: 887.4531768565228 nsec\nrounds: 93458"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1512455.524816514,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000003929409778434026",
+            "extra": "mean: 661.176466740281 nsec\nrounds: 181819"
           }
         ]
       }
