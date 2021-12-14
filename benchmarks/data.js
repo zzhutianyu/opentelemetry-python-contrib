@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1639485470515,
+  "lastUpdate": 1639485473619,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25810,6 +25810,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.883808662532203e-7",
             "extra": "mean: 630.2314922691855 nsec\nrounds: 158731"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jwach@splunk.com",
+            "name": "Jakub Wach",
+            "username": "kubawach"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "07f81461df3e87da0495475d79eed415f3698634",
+          "message": "lambda instrumentation - support for flush timeout (#825)\n\n* lambda instrumentation - support for flush timeout\r\n\r\n* Update instrumentation/opentelemetry-instrumentation-aws-lambda/tests/test_aws_lambda_instrumentation_manual.py\r\n\r\nCo-authored-by: (Eliseo) Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>\r\n\r\n* Update instrumentation/opentelemetry-instrumentation-aws-lambda/tests/test_aws_lambda_instrumentation_manual.py\r\n\r\nCo-authored-by: (Eliseo) Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>\r\n\r\n* fixing lint\r\n\r\n* fixing django lint\r\n\r\nCo-authored-by: (Eliseo) Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>",
+          "timestamp": "2021-12-14T18:06:36+05:30",
+          "tree_id": "7e880302141d0f7cd4729af02fe2fbb55ca3a007",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/07f81461df3e87da0495475d79eed415f3698634"
+        },
+        "date": 1639485467152,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1125021.2931800012,
+            "unit": "iter/sec",
+            "range": "stddev: 3.1105163860832036e-7",
+            "extra": "mean: 888.8720649663313 nsec\nrounds: 86200"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1699268.7373163383,
+            "unit": "iter/sec",
+            "range": "stddev: 4.2322341838421124e-7",
+            "extra": "mean: 588.4884350778464 nsec\nrounds: 133334"
           }
         ]
       }
