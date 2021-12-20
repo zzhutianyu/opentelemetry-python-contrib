@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640001004616,
+  "lastUpdate": 1640001009307,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -8674,58 +8674,6 @@ window.BENCHMARK_DATA = {
       {
         "commit": {
           "author": {
-            "email": "ocelotl@users.noreply.github.com",
-            "name": "Diego Hurtado",
-            "username": "ocelotl"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "4d0f57bbc58a6aa07da7a04961846d2877c7feff",
-          "message": "Release/1.4.0 0.23b0 (#597)",
-          "timestamp": "2021-07-19T15:57:58-07:00",
-          "tree_id": "81b77be8d2043f4abcf8ef178f63de2c487f9edd",
-          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/4d0f57bbc58a6aa07da7a04961846d2877c7feff"
-        },
-        "date": 1626735598220,
-        "tool": "pytest",
-        "benches": [
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
-            "value": 943338.6419769434,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000031413205692866506",
-            "extra": "mean: 1.0600647058243178 usec\nrounds: 78741"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
-            "value": 1350276.3429452311,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000017760235700134312",
-            "extra": "mean: 740.5891432703278 nsec\nrounds: 181786"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_extract_single_header",
-            "value": 99966.72131913189,
-            "unit": "iter/sec",
-            "range": "stddev: 0.00002450371782652222",
-            "extra": "mean: 10.003328975926086 usec\nrounds: 13387"
-          },
-          {
-            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/propagation/test_benchmark_aws_xray_format.py::test_inject_empty_context",
-            "value": 209787.76475263684,
-            "unit": "iter/sec",
-            "range": "stddev: 0.0000016127956644685039",
-            "extra": "mean: 4.766722221284504 usec\nrounds: 18"
-          }
-        ]
-      },
-      {
-        "commit": {
-          "author": {
             "email": "mustin.eric@gmail.com",
             "name": "Eric Mustin",
             "username": "ericmustin"
@@ -13014,6 +12962,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.18259139009575e-7",
             "extra": "mean: 618.568961781506 nsec\nrounds: 140846"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "39601429+ashu658@users.noreply.github.com",
+            "name": "Ashutosh Goel",
+            "username": "ashu658"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "30d0c2ea90dffa7d958a28a699a9021ecb04aa71",
+          "message": "Conditionally create server spans for flask (#828)\n\n* Making span as internal in presence of a span in current context\r\n\r\n* Updating changelog\r\n\r\n* Removing extra print statements\r\n\r\n* Resolving comments: Setting current context as parent in its presence\r\n\r\n* Ignoring pylint check as django.conf.urls.url is removed in django 4.0\r\nDjango release notes: https://docs.djangoproject.com/en/4.0/releases/4.0/\r\n\r\n* Removing changes in django files",
+          "timestamp": "2021-12-20T11:48:59Z",
+          "tree_id": "2ff28714c9d04e1d777b21397d02eea35071ecd1",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/30d0c2ea90dffa7d958a28a699a9021ecb04aa71"
+        },
+        "date": 1640001002646,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 923645.6400590733,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018039693089953547",
+            "extra": "mean: 1.0826662917350458 usec\nrounds: 80001"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1381610.2368566508,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000266611302691211",
+            "extra": "mean: 723.7931316107896 nsec\nrounds: 172414"
           }
         ]
       }
