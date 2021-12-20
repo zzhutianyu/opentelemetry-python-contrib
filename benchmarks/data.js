@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640001001206,
+  "lastUpdate": 1640001004616,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25732,6 +25732,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 8.560514282001413e-8",
             "extra": "mean: 511.4328597019301 nsec\nrounds: 158705"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "39601429+ashu658@users.noreply.github.com",
+            "name": "Ashutosh Goel",
+            "username": "ashu658"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "30d0c2ea90dffa7d958a28a699a9021ecb04aa71",
+          "message": "Conditionally create server spans for flask (#828)\n\n* Making span as internal in presence of a span in current context\r\n\r\n* Updating changelog\r\n\r\n* Removing extra print statements\r\n\r\n* Resolving comments: Setting current context as parent in its presence\r\n\r\n* Ignoring pylint check as django.conf.urls.url is removed in django 4.0\r\nDjango release notes: https://docs.djangoproject.com/en/4.0/releases/4.0/\r\n\r\n* Removing changes in django files",
+          "timestamp": "2021-12-20T11:48:59Z",
+          "tree_id": "2ff28714c9d04e1d777b21397d02eea35071ecd1",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/30d0c2ea90dffa7d958a28a699a9021ecb04aa71"
+        },
+        "date": 1640000999455,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1150919.8232444779,
+            "unit": "iter/sec",
+            "range": "stddev: 1.541998014433234e-7",
+            "extra": "mean: 868.8702547332704 nsec\nrounds: 94331"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1610140.7968481474,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5629655384362674e-7",
+            "extra": "mean: 621.0636994960324 nsec\nrounds: 149232"
           }
         ]
       }
