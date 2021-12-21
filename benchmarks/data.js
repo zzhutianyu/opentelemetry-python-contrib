@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640107893816,
+  "lastUpdate": 1640107896559,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25700,6 +25700,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.5629655384362674e-7",
             "extra": "mean: 621.0636994960324 nsec\nrounds: 149232"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "srikanth.chekuri92@gmail.com",
+            "name": "Srikanth Chekuri",
+            "username": "lonewolf3739"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9219677adb4118c6b9a7a121e2703c473c2c36f4",
+          "message": "Fix CHANGELOG (#839)",
+          "timestamp": "2021-12-21T23:00:31+05:30",
+          "tree_id": "d9a97d56c866544bf0e4cdca86785585ce980170",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/9219677adb4118c6b9a7a121e2703c473c2c36f4"
+        },
+        "date": 1640107891255,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1342323.4747035424,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3220093528135852e-7",
+            "extra": "mean: 744.9769141680653 nsec\nrounds: 44053"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1985326.27844803,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1144985752824624e-7",
+            "extra": "mean: 503.69554408040193 nsec\nrounds: 161291"
           }
         ]
       }
