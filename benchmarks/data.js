@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640469645474,
+  "lastUpdate": 1640471048990,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25816,6 +25816,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.9953317069446824e-8",
             "extra": "mean: 102.87943372950528 nsec\nrounds: 123457"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pverheyden@gmail.com",
+            "name": "Phillip Verheyden",
+            "username": "phillipuniverse"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3de29868a9c0feb800321224f5b032954fa16211",
+          "message": "Add traceresponse headers for asgi apps (FastAPI, Starlette) (#817)\n\nThis asgi version is modeled after the original wsgi version in #436 and corresponds to the SERVER span. Also cleans up some of the existing ASGI functionality to reduce complexity and make future contributions more straightforward.",
+          "timestamp": "2021-12-25T21:52:28Z",
+          "tree_id": "ef1add1c79cc6b05117445e7a31bacb501de6833",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/3de29868a9c0feb800321224f5b032954fa16211"
+        },
+        "date": 1640471041159,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1236438.0732853282,
+            "unit": "iter/sec",
+            "range": "stddev: 7.836153480729761e-7",
+            "extra": "mean: 808.7748360442182 nsec\nrounds: 166667"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2265447.489754096,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010735504071832695",
+            "extra": "mean: 441.4138948365657 nsec\nrounds: 185186"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4786012.832310125,
+            "unit": "iter/sec",
+            "range": "stddev: 2.577182649669223e-7",
+            "extra": "mean: 208.94218946707866 nsec\nrounds: 57804"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 9706547.975447832,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6067384457631562e-7",
+            "extra": "mean: 103.02323776989907 nsec\nrounds: 119048"
           }
         ]
       }
