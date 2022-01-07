@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641591449581,
+  "lastUpdate": 1641595212200,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -25920,6 +25920,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.087092208102864e-8",
             "extra": "mean: 116.71084485641319 nsec\nrounds: 102041"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sanketmehta28@gmail.com",
+            "name": "Sanket Mehta",
+            "username": "sanketmehta28"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d01efe5c5023110447de1741107e53b009b5886e",
+          "message": "Develop/condition server span django (#832)\n\n* Code changes and pytests for https://github.com/open-telemetry/opentelemetry-python-contrib/issues/448\r\n\r\n* removing unnecessary imports\r\n\r\n* removing unnecessary imports\r\n\r\n* adding wsgi.py file to get the wsgi application object\r\n\r\n* Revert \"Updating personal fork from public repo\"\r\n\r\n* Revert \"Updating personal fork from public repo\"\r\n\r\n* Revert \"Updating personal fork from public repo\"\r\n\r\n* Revert \"Updating personal fork from public repo\"\r\n\r\n* Changing the unit test case by removing WSGI instrumentation and make it from generalised\r\n\r\n* removing unnecessary import statements\r\n\r\n* Revert \"Updating personal fork from public repo\"\r\n\r\n* resolving failed builds for lint and generate\r\n\r\n* removing commented code\r\n\r\n* removing blank line\r\n\r\n* removed unused variable resp from test_middleware.py and modified the CHANGELOG.md with PR entry\r\n\r\n* modified the CHANGELOG.md to removed unnecessary entry\r\n\r\n* modified the CHANGELOG.md to add proper PR entry\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2022-01-07T16:24:09-06:00",
+          "tree_id": "7d802b18f25bcc26ca8d394d6c159a0df4f739c5",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/d01efe5c5023110447de1741107e53b009b5886e"
+        },
+        "date": 1641595207598,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1434005.779112533,
+            "unit": "iter/sec",
+            "range": "stddev: 9.954337164574928e-7",
+            "extra": "mean: 697.3472593805998 nsec\nrounds: 188680"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2371483.2155928304,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013829146739720958",
+            "extra": "mean: 421.6770304019418 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3810401.330143334,
+            "unit": "iter/sec",
+            "range": "stddev: 5.301698843191918e-7",
+            "extra": "mean: 262.43954727005183 nsec\nrounds: 52084"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7581875.842958945,
+            "unit": "iter/sec",
+            "range": "stddev: 3.678707153192185e-7",
+            "extra": "mean: 131.89348133799035 nsec\nrounds: 116280"
           }
         ]
       }
