@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1642783543800,
+  "lastUpdate": 1642791329613,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26232,6 +26232,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.814719747348006e-7",
             "extra": "mean: 143.43406730976753 nsec\nrounds: 94340"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "pezzer55@gmail.com",
+            "name": "Dan",
+            "username": "pezzer55"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "91d65e033eccc8e13df3b4ac53007623f6d70678",
+          "message": "Fix Django 1.9 issue preventing use of MIDDLEWARE_CLASSES (#870)\n\n* Update CHANGELOG.md\r\n\r\n* Fix Django 1.9 issue preventing use of MIDDLEWARE_CLASSES\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2022-01-22T00:10:32+05:30",
+          "tree_id": "c80b880243bb1da9a5a6dff83abfd22eca4f14b4",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/91d65e033eccc8e13df3b4ac53007623f6d70678"
+        },
+        "date": 1642791324170,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1451250.2261432258,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001683962283868539",
+            "extra": "mean: 689.0610468038004 nsec\nrounds: 161291"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2723603.5716274497,
+            "unit": "iter/sec",
+            "range": "stddev: 7.33024447037902e-7",
+            "extra": "mean: 367.160628814444 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3406787.483466072,
+            "unit": "iter/sec",
+            "range": "stddev: 1.895371157225717e-7",
+            "extra": "mean: 293.53166431816265 nsec\nrounds: 43291"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 6949332.178947367,
+            "unit": "iter/sec",
+            "range": "stddev: 1.12441841791639e-7",
+            "extra": "mean: 143.89871922224893 nsec\nrounds: 95239"
           }
         ]
       }
