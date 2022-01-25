@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643124728888,
+  "lastUpdate": 1643125795405,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26336,6 +26336,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.829330323850196e-8",
             "extra": "mean: 130.12673625430975 nsec\nrounds: 92593"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sankmeht@cisco.com",
+            "name": "Sanket Mehta",
+            "username": "sanketmehta28"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b32be746e4a2d5ff2cd2bb8ebe5731197d395800",
+          "message": "Develop/conditional server span pyramid (#869)\n\n* code change to resolve the bug https://github.com/open-telemetry/opentelemetry-python-contrib/issues/449\r\n\r\n* modifying the changelog file to add entry for PR #869\r\n\r\n* removing redundent get statement\r\n\r\n* Conditionally create server spans for falcon (#867)\r\n\r\n* Making span as internal for falcon in presence of a span in current context\r\n\r\n* Updating changelog\r\n\r\n* Fixing lint and generate build failures\r\n\r\n* Resolving comments: Converting snippet to re-usable function\r\n\r\n* Fixing build failures\r\n\r\n* Resolving comments: Creating wrapper for start span to make internal/server span\r\n\r\n* Rerun docker tests\r\n\r\n* Resolving comments: Refactoring\r\n\r\n* Fix Django 1.9 issue preventing use of MIDDLEWARE_CLASSES (#870)\r\n\r\n* Update CHANGELOG.md\r\n\r\n* Fix Django 1.9 issue preventing use of MIDDLEWARE_CLASSES\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>\r\n\r\n* changing the import trace statement to resolve issue with unit test cases\r\n\r\nCo-authored-by: Ashutosh Goel <39601429+ashu658@users.noreply.github.com>\r\nCo-authored-by: Dan <pezzer55@gmail.com>\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>\r\nCo-authored-by: Owais Lone <owais@users.noreply.github.com>",
+          "timestamp": "2022-01-25T15:31:13Z",
+          "tree_id": "5327616b6771c90a520cace9415b5bba7b31de73",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b32be746e4a2d5ff2cd2bb8ebe5731197d395800"
+        },
+        "date": 1643125789479,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 199058.02079507074,
+            "unit": "iter/sec",
+            "range": "stddev: 3.1480133484673136e-7",
+            "extra": "mean: 5.0236609205991005 usec\nrounds: 19724"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 548606.5657638008,
+            "unit": "iter/sec",
+            "range": "stddev: 2.455765278286041e-7",
+            "extra": "mean: 1.8227999123702503 usec\nrounds: 59524"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 2648171.6502177273,
+            "unit": "iter/sec",
+            "range": "stddev: 7.369962402766379e-7",
+            "extra": "mean: 377.61902628848594 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 6676312.128986152,
+            "unit": "iter/sec",
+            "range": "stddev: 3.5809992583982136e-7",
+            "extra": "mean: 149.78329063717456 nsec\nrounds: 92593"
           }
         ]
       }
