@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643412811433,
+  "lastUpdate": 1643623848782,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -26908,6 +26908,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.4332267954010014e-7",
             "extra": "mean: 120.76633922832384 nsec\nrounds: 114943"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c8020cbea5a7491484e214c326f88366895f99e5",
+          "message": "updating changelogs and version to 1.9.1-0.28b1 (#887)\n\n* updating changelogs and version to 1.9.1-0.28b1\r\n\r\n* Update CHANGELOG.md\r\n\r\nCo-authored-by: Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>\r\n\r\n* Update CHANGELOG.md\r\n\r\nCo-authored-by: Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>\r\n\r\nCo-authored-by: Nathaniel Ruiz Nowell <enruizno@uwaterloo.ca>",
+          "timestamp": "2022-01-31T09:40:29Z",
+          "tree_id": "7bf5656b4d09bc8151ad6dc8ce52bb4e2e8a45f6",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/c8020cbea5a7491484e214c326f88366895f99e5"
+        },
+        "date": 1643623843689,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1270230.621729956,
+            "unit": "iter/sec",
+            "range": "stddev: 2.00502167634181e-7",
+            "extra": "mean: 787.2586150050348 nsec\nrounds: 161291"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2266701.8712217947,
+            "unit": "iter/sec",
+            "range": "stddev: 7.798003499018797e-7",
+            "extra": "mean: 441.16961859697756 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4519681.562904083,
+            "unit": "iter/sec",
+            "range": "stddev: 3.176112803416373e-8",
+            "extra": "mean: 221.25452558597064 nsec\nrounds: 51021"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8791374.230675433,
+            "unit": "iter/sec",
+            "range": "stddev: 2.826631438681894e-8",
+            "extra": "mean: 113.74785940866614 nsec\nrounds: 103093"
           }
         ]
       }
