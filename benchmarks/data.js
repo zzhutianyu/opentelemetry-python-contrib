@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643740944167,
+  "lastUpdate": 1643754370902,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27064,6 +27064,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.7955159416106053e-8",
             "extra": "mean: 114.5128848709201 nsec\nrounds: 103093"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "t0rr@mail.ru",
+            "name": "Oleg A",
+            "username": "Olegt0rr"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "895800fa1dd03c2dee6a23bd87999f6f19c80a51",
+          "message": "aiohttp instrumentation: correct url filter input type (#864)\n\n* fix: correct _UrlFilterT\r\n\r\n* docs: CHANGELOG.md update\r\n\r\n* style: apply isort\r\n\r\n* fix: add yarl to docs requirements\r\n\r\n* Revert \"fix: add yarl to docs requirements\"\r\n\r\nThis reverts commit e482ba54fc119a16e001cccc0753554c92549c3e.\r\n\r\n* fix: add yarl to nitpick exceptions\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2022-02-01T16:04:49-06:00",
+          "tree_id": "f129cb38922ed6deffdbec61a666d75a0beec6e1",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/895800fa1dd03c2dee6a23bd87999f6f19c80a51"
+        },
+        "date": 1643754365658,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1053294.7026576768,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002390813320467576",
+            "extra": "mean: 949.4019076301543 nsec\nrounds: 158731"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2006024.3512918944,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001598031037581935",
+            "extra": "mean: 498.4984351540861 nsec\nrounds: 178572"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4369797.532889597,
+            "unit": "iter/sec",
+            "range": "stddev: 3.637748713535409e-8",
+            "extra": "mean: 228.84355452931248 nsec\nrounds: 50001"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8511867.717086855,
+            "unit": "iter/sec",
+            "range": "stddev: 3.6357643377586703e-8",
+            "extra": "mean: 117.48302878254516 nsec\nrounds: 102041"
           }
         ]
       }
