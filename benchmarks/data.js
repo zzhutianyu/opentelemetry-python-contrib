@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643906676622,
+  "lastUpdate": 1643909101507,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27376,6 +27376,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.783847080301455e-7",
             "extra": "mean: 135.75783113826657 nsec\nrounds: 106383"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sankmeht@cisco.com",
+            "name": "Sanket Mehta",
+            "username": "sanketmehta28"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0431d7b62f4cf363fceb1f3f722339b975f46d6b",
+          "message": "adding unit test case for ASGI framework for application wrapped with… (#899)\n\n* adding unit test case for ASGI framework for application wrapped with another framework\r\n\r\n* resolving lint errors\r\n\r\n* resolving generate build errors\r\n\r\n* resolving flake errors\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2022-02-03T22:40:03+05:30",
+          "tree_id": "49edd25f79d225fa70ed72b609094e8237ef1e61",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/0431d7b62f4cf363fceb1f3f722339b975f46d6b"
+        },
+        "date": 1643909095836,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1258620.64595724,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017091905553601032",
+            "extra": "mean: 794.5205755301214 nsec\nrounds: 185186"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2449424.3488178006,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011460505361638264",
+            "extra": "mean: 408.25918974911417 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4820273.965925747,
+            "unit": "iter/sec",
+            "range": "stddev: 3.410190622483367e-8",
+            "extra": "mean: 207.45708793086214 nsec\nrounds: 56180"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 9708139.50865697,
+            "unit": "iter/sec",
+            "range": "stddev: 2.8290052349727715e-8",
+            "extra": "mean: 103.00634834399258 nsec\nrounds: 117648"
           }
         ]
       }
