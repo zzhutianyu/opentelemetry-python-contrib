@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643828983703,
+  "lastUpdate": 1643878377068,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27220,6 +27220,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.6264569034227264e-8",
             "extra": "mean: 122.79417979993354 nsec\nrounds: 100000"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "39601429+ashu658@users.noreply.github.com",
+            "name": "Ashutosh Goel",
+            "username": "ashu658"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0e92d6add803cba595477ff2671983dcc917baf5",
+          "message": "Mark span as internal in presence of another span for tornado and use (#889)\n\n_start_internal_or_server_span function for flask, pyramid and django\r\n\r\nAdding changelog entry\r\n\r\nAdding unit test and fixing lint errors\r\n\r\nRefactoring to use _start_internal_or_server_span function\r\n\r\nRemoving unwanted imports and variables\r\n\r\nFixing lint errors\r\n\r\nadding changes from tox -e generate\r\n\r\nFixing build errors",
+          "timestamp": "2022-02-03T14:08:04+05:30",
+          "tree_id": "53722586b3a44b63e3691e6af10752ebbdec4436",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/0e92d6add803cba595477ff2671983dcc917baf5"
+        },
+        "date": 1643878371181,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 102238.65068670205,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000005564884928345988",
+            "extra": "mean: 9.78103675355007 usec\nrounds: 13441"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 216078.4831041515,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004741334483215168",
+            "extra": "mean: 4.627948075320356 usec\nrounds: 27174"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3311422.4629664337,
+            "unit": "iter/sec",
+            "range": "stddev: 6.214739034356322e-7",
+            "extra": "mean: 301.98502643006293 nsec\nrounds: 46727"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 6970894.041654604,
+            "unit": "iter/sec",
+            "range": "stddev: 5.198793501309898e-7",
+            "extra": "mean: 143.4536221644785 nsec\nrounds: 104167"
           }
         ]
       }
