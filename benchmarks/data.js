@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643909101507,
+  "lastUpdate": 1643912222294,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27428,6 +27428,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.8290052349727715e-8",
             "extra": "mean: 103.00634834399258 nsec\nrounds: 117648"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "owais@users.noreply.github.com",
+            "name": "Owais Lone",
+            "username": "owais"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8d309af49ab5c0b1614ea0eef2dd58d3f7427107",
+          "message": "Logging: Defensively access provider resource (#890)\n\nNow service name is extracted from the provider defensively and lazily.\r\nThis accounts for an SDK that does not provide access to \"resource\" via\r\nTracerProviders and for lazy initialization of TracerProviders.\r\n\r\nFixes #810\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2022-02-03T12:00:15-06:00",
+          "tree_id": "f052802d1d33f763c53cce8a7e5b6af0e26c299b",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/8d309af49ab5c0b1614ea0eef2dd58d3f7427107"
+        },
+        "date": 1643912216846,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1521700.0742646256,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013144824205764875",
+            "extra": "mean: 657.1597234647899 nsec\nrounds: 192308"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2493778.22583736,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011081851889156037",
+            "extra": "mean: 400.99796751723017 nsec\nrounds: 178572"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4308447.771496828,
+            "unit": "iter/sec",
+            "range": "stddev: 4.5633517519164094e-8",
+            "extra": "mean: 232.10215210581757 nsec\nrounds: 49505"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8112519.034688338,
+            "unit": "iter/sec",
+            "range": "stddev: 3.763869293779187e-8",
+            "extra": "mean: 123.26627471986755 nsec\nrounds: 99010"
           }
         ]
       }
