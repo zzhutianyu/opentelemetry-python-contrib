@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643903484550,
+  "lastUpdate": 1643906676622,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27324,6 +27324,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.741257238879923e-7",
             "extra": "mean: 136.7722628827798 nsec\nrounds: 87720"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "39601429+ashu658@users.noreply.github.com",
+            "name": "Ashutosh Goel",
+            "username": "ashu658"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0180b837eeb3ef56faf5e20223b741e1469bff51",
+          "message": "Adding unit tests for conditional server span creation in starlette (#897)\n\n* Adding unit tests for conditional server span creation in starlette\r\n\r\n* Adding changelog entry and renaming function\r\n\r\n* Update CHANGELOG.md\r\n\r\nRemoving changelog entry\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2022-02-03T21:57:06+05:30",
+          "tree_id": "c800554fea3c9c9f34e10957715f13d4b311ff47",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/0180b837eeb3ef56faf5e20223b741e1469bff51"
+        },
+        "date": 1643906671358,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1365854.125081186,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022728160962395896",
+            "extra": "mean: 732.1426070597943 nsec\nrounds: 188680"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2347537.0538558518,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015241378107186398",
+            "extra": "mean: 425.97836671270835 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3623341.3192889043,
+            "unit": "iter/sec",
+            "range": "stddev: 2.660619525358311e-7",
+            "extra": "mean: 275.98835215343144 nsec\nrounds: 45872"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7366057.5718966015,
+            "unit": "iter/sec",
+            "range": "stddev: 2.783847080301455e-7",
+            "extra": "mean: 135.75783113826657 nsec\nrounds: 106383"
           }
         ]
       }
