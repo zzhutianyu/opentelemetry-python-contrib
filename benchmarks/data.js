@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643912222294,
+  "lastUpdate": 1643996214137,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27480,6 +27480,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.763869293779187e-8",
             "extra": "mean: 123.26627471986755 nsec\nrounds: 99010"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ran@gethelios.dev",
+            "name": "Ran Nozik",
+            "username": "nozik"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0b9e96dae0bfcafa1e0b28dc695e3697fbcf2864",
+          "message": "Support newer httpx versions (#866)",
+          "timestamp": "2022-02-04T09:07:31-08:00",
+          "tree_id": "9505481cdbf79f267aedf521e2492589da864941",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/0b9e96dae0bfcafa1e0b28dc695e3697fbcf2864"
+        },
+        "date": 1643996208798,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1510457.2476751914,
+            "unit": "iter/sec",
+            "range": "stddev: 1.8582167353180602e-7",
+            "extra": "mean: 662.0511779059624 nsec\nrounds: 175439"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2790552.849357942,
+            "unit": "iter/sec",
+            "range": "stddev: 5.180821250627824e-7",
+            "extra": "mean: 358.35193023846335 nsec\nrounds: 192308"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4176163.933705691,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5427283711513919e-7",
+            "extra": "mean: 239.4542014811896 nsec\nrounds: 54645"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8735557.224168217,
+            "unit": "iter/sec",
+            "range": "stddev: 1.8886699979956873e-7",
+            "extra": "mean: 114.474666508233 nsec\nrounds: 121952"
           }
         ]
       }
