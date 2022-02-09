@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643996214137,
+  "lastUpdate": 1644380744148,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27532,6 +27532,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.8886699979956873e-7",
             "extra": "mean: 114.474666508233 nsec\nrounds: 121952"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sankmeht@cisco.com",
+            "name": "Sanket Mehta",
+            "username": "sanketmehta28"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "454f4b1511c8c0c59a85002cdc3238b46b96a970",
+          "message": "code changes to resolve conditional server span creation for WSGI and adding 'attributes' parameter to util function (#903)\n\n* code changes to resolve conditional server span creation for WSGI (https://github.com/open-telemetry/opentelemetry-python-contrib/issues/454)\r\n\r\n* Adding entry to changelog.md\r\n\r\n* modifying _start_internal_or_server_span() to add attributes as a parameter. Also calling _start_internal_or_server_span() in WSGI instrumentation\r\n\r\n* resolving flake8 and typo issues",
+          "timestamp": "2022-02-08T22:03:18-06:00",
+          "tree_id": "c9c79fd569c99486c199ba5a9ff3157aff3fa6a2",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/454f4b1511c8c0c59a85002cdc3238b46b96a970"
+        },
+        "date": 1644380738484,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1334449.1309342461,
+            "unit": "iter/sec",
+            "range": "stddev: 1.8295205023664484e-7",
+            "extra": "mean: 749.3728886464714 nsec\nrounds: 163935"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2525333.8994266577,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010438880118150173",
+            "extra": "mean: 395.9872396387013 nsec\nrounds: 188680"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3923715.5714658867,
+            "unit": "iter/sec",
+            "range": "stddev: 4.512869030876405e-8",
+            "extra": "mean: 254.86047135328596 nsec\nrounds: 52084"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7665874.898417523,
+            "unit": "iter/sec",
+            "range": "stddev: 4.134300004145517e-8",
+            "extra": "mean: 130.4482545372926 nsec\nrounds: 90910"
           }
         ]
       }
