@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644380744148,
+  "lastUpdate": 1644597016079,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27584,6 +27584,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 4.134300004145517e-8",
             "extra": "mean: 130.4482545372926 nsec\nrounds: 90910"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "srikanth.chekuri92@gmail.com",
+            "name": "Srikanth Chekuri",
+            "username": "lonewolf3739"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d54b61e6872a2f6773054d3d825b9781cdfc872c",
+          "message": "feat(instrumentation-dbapi): add experimental sql commenter capability (#908)\n\n* feat(instrumentation-dbapi): add experimental sql commenter capability\r\n\r\n* Update instrumentation/opentelemetry-instrumentation-dbapi/src/opentelemetry/instrumentation/dbapi/__init__.py\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>\r\n\r\n* Fix lint\r\n\r\n* Add CHANGELOG entry\r\n\r\n* Fix lint\r\n\r\n* Fix lint again\r\n\r\nCo-authored-by: Diego Hurtado <ocelotl@users.noreply.github.com>",
+          "timestamp": "2022-02-11T10:14:26-06:00",
+          "tree_id": "689f414c278bb96f06316c7793263aa67073c140",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/d54b61e6872a2f6773054d3d825b9781cdfc872c"
+        },
+        "date": 1644597010429,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1286512.6166357293,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013194045977172445",
+            "extra": "mean: 777.2951365335118 nsec\nrounds: 140846"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2221102.670677748,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017440332333248493",
+            "extra": "mean: 450.22682346088277 nsec\nrounds: 200000"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3496839.6597884675,
+            "unit": "iter/sec",
+            "range": "stddev: 4.8693811336616685e-8",
+            "extra": "mean: 285.9725058313158 nsec\nrounds: 42014"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7026353.926652116,
+            "unit": "iter/sec",
+            "range": "stddev: 3.762620833633424e-8",
+            "extra": "mean: 142.32132489184386 nsec\nrounds: 84739"
           }
         ]
       }
