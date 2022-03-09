@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1646806450654,
+  "lastUpdate": 1646827771703,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28000,6 +28000,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.4457015003152452e-7",
             "extra": "mean: 364.62979037932934 nsec\nrounds: 53764"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "39601429+ashu658@users.noreply.github.com",
+            "name": "Ashutosh Goel",
+            "username": "ashu658"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c60a7e46ab2d9e37d9b18d5457353fa0ecd11923",
+          "message": "Flask: Capture custom request/response headers as span attributes (#952)\n\n* Capture request/response headers for flask\r\n\r\n* Update changelog and fixed lint errors",
+          "timestamp": "2022-03-09T11:52:06Z",
+          "tree_id": "37fed41a946752ade4d48907ea4f6558c2118103",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/c60a7e46ab2d9e37d9b18d5457353fa0ecd11923"
+        },
+        "date": 1646827766442,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1250240.1355623992,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002679004706253106",
+            "extra": "mean: 799.8463427589367 nsec\nrounds: 163935"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2291797.4879424176,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016273495719401803",
+            "extra": "mean: 436.3387276847933 nsec\nrounds: 185186"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 4478504.9497964885,
+            "unit": "iter/sec",
+            "range": "stddev: 3.4394073642830526e-8",
+            "extra": "mean: 223.28880088553996 nsec\nrounds: 51021"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 8853127.67906134,
+            "unit": "iter/sec",
+            "range": "stddev: 2.885086817882789e-8",
+            "extra": "mean: 112.95443104981184 nsec\nrounds: 105264"
           }
         ]
       }
