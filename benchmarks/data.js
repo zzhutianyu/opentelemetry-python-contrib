@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1646675981679,
+  "lastUpdate": 1646806450654,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -27948,6 +27948,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.573041327402377e-8",
             "extra": "mean: 118.48489499765441 nsec\nrounds: 103093"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "64461612+Thiyagu55@users.noreply.github.com",
+            "name": "Thiyagu55",
+            "username": "Thiyagu55"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "dbb35a29465bcaf84380715c356726718724859b",
+          "message": "Sqlcommenter integration into SQLAlchemy (#924)\n\n* Integrating sqlcommenter into psycopg2\r\n\r\n* Integrating sqlcommenter into psycopg2 - Converted public local variable into private\r\n\r\n* Added test cases for sqlcommenter & PR Changes\r\n\r\n* Code refactoring for generate sqlcommenter\r\n\r\n* Added testcase for sqlcommenter integration into sqlalchemy\r\n\r\n* updated change log\r\n\r\n* updated to accept latest logs\r\n\r\n* Updated lint changes\r\n\r\n* Fixed errors due to linting\r\n\r\n* Fixed linting errors\r\n\r\n* Fixed linting errors\r\n\r\n* Fixed linting errors\r\n\r\n* Update CHANGELOG.md\r\n\r\n* Update CHANGELOG.md\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>\r\n\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2022-03-08T23:57:00-06:00",
+          "tree_id": "0826787886f4bca706d523c0e7cc8e3d730dff2d",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/dbb35a29465bcaf84380715c356726718724859b"
+        },
+        "date": 1646806444227,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1337376.5184794266,
+            "unit": "iter/sec",
+            "range": "stddev: 2.084703034682572e-7",
+            "extra": "mean: 747.7325840423091 nsec\nrounds: 178572"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2457583.830438071,
+            "unit": "iter/sec",
+            "range": "stddev: 6.546811253210104e-7",
+            "extra": "mean: 406.9037188537182 nsec\nrounds: 169492"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 1337039.5271460495,
+            "unit": "iter/sec",
+            "range": "stddev: 7.173360352638402e-7",
+            "extra": "mean: 747.9210447386919 nsec\nrounds: 93458"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 2742507.6787070613,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4457015003152452e-7",
+            "extra": "mean: 364.62979037932934 nsec\nrounds: 53764"
           }
         ]
       }
