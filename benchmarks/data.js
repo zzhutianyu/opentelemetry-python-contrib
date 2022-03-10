@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1646934094522,
+  "lastUpdate": 1646936385525,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28104,6 +28104,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.00001701617057976375",
             "extra": "mean: 729.7108000186654 nsec\nrounds: 125000"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "aboten@lightstep.com",
+            "name": "Alex Boten",
+            "username": "codeboten"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fcba751969a4fecdcff51fc6e0f4b74f85f6390a",
+          "message": "[instrumentation/wsgi] fix NonRecordingSpan bug (#957)\n\n* [instrumentation/wsgi] fix NonRecordingSpan bug\r\n\r\nThere was a bug caused by accessing `.kind` on a NonRecordingSpan. Added a test to validate the fix.\r\n\r\nFix #956\r\n\r\n* fix lint\r\n\r\n* use is_recording\r\n\r\n* fix lint\r\n\r\n* fix lint\r\n\r\n* fix lint",
+          "timestamp": "2022-03-10T12:02:49-06:00",
+          "tree_id": "9c5b085919a80a44ed34ed744aaf5eb1c25eabee",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/fcba751969a4fecdcff51fc6e0f4b74f85f6390a"
+        },
+        "date": 1646936379392,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1178438.9517053743,
+            "unit": "iter/sec",
+            "range": "stddev: 2.2362091056026222e-7",
+            "extra": "mean: 848.5802328180256 nsec\nrounds: 142858"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2271560.6816291595,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000010907824609095875",
+            "extra": "mean: 440.2259680260012 nsec\nrounds: 178572"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 969644.2141432428,
+            "unit": "iter/sec",
+            "range": "stddev: 2.768305987144626e-7",
+            "extra": "mean: 1.0313061073474035 usec\nrounds: 81295"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 1355688.3531176161,
+            "unit": "iter/sec",
+            "range": "stddev: 2.75123272712805e-7",
+            "extra": "mean: 737.6326555438384 nsec\nrounds: 140846"
           }
         ]
       }
